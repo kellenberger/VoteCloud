@@ -1,0 +1,1 @@
+SELECT COUNT(bafu_daten_id), `year` FROM bafu_daten GROUP BY `year`;

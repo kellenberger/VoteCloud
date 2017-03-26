@@ -1,0 +1,1 @@
+SELECT DISTINCT pollutant_name_de FROM open_data.bafu_daten;
