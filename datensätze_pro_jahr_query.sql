@@ -1,1 +1,1 @@
-SELECT COUNT(bafu_daten_id), `year` FROM bafu_daten GROUP BY `year`;
+SELECT COUNT(bafu_daten_id), `year` FROM open_data.bafu_daten GROUP BY `year`;
