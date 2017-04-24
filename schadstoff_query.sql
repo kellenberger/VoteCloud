@@ -1,1 +1,0 @@
-SELECT DISTINCT pollutant_name_de, aggregation_name_de FROM open_data.bafu_daten WHERE aggregation_name_de = "Jahresmittel";
