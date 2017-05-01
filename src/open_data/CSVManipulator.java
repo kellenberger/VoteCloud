@@ -25,19 +25,21 @@ public class CSVManipulator {
 
 				// use comma as separator
 				String[] lineData = line.split(cvsSplitBy);
-				String description = lineData[3].replaceAll("[\"()«»/.0-9-]", "");
+				String description = lineData[3].replaceAll("[\"()Â«Â»/.0-9-]", "");
 				String[] words = description.split(" ");
 				int wordId = Integer.parseInt(lineData[1]);
+				
 				for(String word : words){
 					if(!word.isEmpty() && ((word.length() >=6 && Character.isLowerCase(word.charAt(0))) || (word.length() >= 3 && Character.isUpperCase(word.charAt(0))))){
-						Iterator<WordWithIds> iterator = wordList.iterator();
+						ListIterator<WordWithIds> iterator = wordList.listIterator();
 						boolean wordAdded = false;
 						while(iterator.hasNext()){
 							WordWithIds wordWithIds = iterator.next();
-							if(wordWithIds.checkWord(word)){
-								wordWithIds.addId(wordId);
+							WordWithIds newOne = wordWithIds.checkWord(word, wordId);
+							if(newOne != null){
 								wordAdded = true;
-								break;
+								if(!checkIfWordAlreadyInList(wordList, newOne))
+									iterator.add(newOne);
 							}
 						}
 						if(!wordAdded)
@@ -46,6 +48,7 @@ public class CSVManipulator {
 				}
 			}
 			Collections.sort(wordList, new WordComparator());
+			wordList = selectSignificantWords(wordList);
 			Iterator<WordWithIds> it = wordList.iterator();
 			int count = 0;
 			while(it.hasNext()){
@@ -70,6 +73,43 @@ public class CSVManipulator {
 				}
 			}
 		}
+	}
+	
+	private static boolean checkIfWordAlreadyInList(LinkedList<WordWithIds> wordList, WordWithIds wordWithIds){
+		if(wordList.contains(wordWithIds))
+			return true;
+		
+		String word1 = wordWithIds.getWord().toLowerCase();
+		Iterator<WordWithIds> it = wordList.iterator();
+		while(it.hasNext()){
+			WordWithIds next = it.next();
+			String word2 = next.getWord().toLowerCase();
+			if(word1.equals(word2) || next.isWordSimilar(word1))
+				next.addIds(wordWithIds.getIds());
+				return true;
+		}
+		return false;
+	}
+	
+	private static LinkedList<WordWithIds> selectSignificantWords(LinkedList<WordWithIds> wordList){
+		LinkedList<WordWithIds> newList = new LinkedList<WordWithIds>();
+		LinkedList<Integer> includedIds = new LinkedList<Integer>();
+		Iterator<WordWithIds> it = wordList.iterator();
+		while(it.hasNext()){
+			WordWithIds next = it.next();
+			Integer[] ids = next.getIds().toArray(new Integer[next.getIds().size()]);
+			boolean containsUnusedId = false;
+			for(int id : ids){
+				if(!includedIds.contains(id)){
+					containsUnusedId = true;
+					includedIds.add(id);
+				}
+			}
+			if(containsUnusedId)
+				newList.add(next);
+		}
+		System.out.println("\n\n\nAbgedeckte Vorlagen: "+includedIds.size()+"\n\n");
+		return newList;
 	}
 
 }
