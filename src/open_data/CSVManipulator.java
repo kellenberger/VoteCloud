@@ -107,12 +107,13 @@ public class CSVManipulator {
 				containsUnusedId = true;
 			else
 				containsUnusedId = false;
-			for(int id : ids){
-				if(!includedIds.contains(id)){
-					containsUnusedId = true;
-					includedIds.add(id);
+			if(next.getCount() < 200)
+				for(int id : ids){
+					if(!includedIds.contains(id)){
+						containsUnusedId = true;
+						includedIds.add(id);
+					}
 				}
-			}
 			if(containsUnusedId){
 				newList.add(next);
 				usedWords.add(next.getWord());

@@ -1,28 +1,44 @@
-var votes = [];
+var displayedVotesStack = [];
+var displayedWordsWithIdsStack = [];
+
+function loadWords(){
+  if(displayedVotesStack.length = 0){
+    var votes = []:
+    $.getJSON("results_kanton.json", function(data){
+      $.each(data, function(key, val){
+        var vote = new Vote(val);
+        votes.push(vote);
+      });
+    }).fail( function(d, textStatus, error) {
+          console.error("getJSON failed, status: " + textStatus + ", error: "+error)
+    });
+    displayedVotesStack.push(votes);
+  }
+
+  var currentVotes = displayedVotesStack[displayedVotesStack.length-1];
+  var newWordList = [];
+  currentVotes.foreach(function(vote){
+    var description = vote.description.replace(/["()«»/.0-9-]/g);
+    var words[] = description.split(" ");
+    words.foreach(function(word){
+      var isAdded = false;
+      newWordList.foreach(function(wordWithIds){
+
+      });
+      unless(isAdded){
+        newWordList.push(new WordWithIds(vote.description, vote.id));
+      }
+    });
+  });
+}
 
 $(document).ready(function(){
-  $.getJSON("results_kanton.json", function(data){
-    $.each(data, function(key, val){
-      var vote = new Vote(val);
-      votes.push(vote);
-    });
-  }).fail( function(d, textStatus, error) {
-        console.error("getJSON failed, status: " + textStatus + ", error: "+error)
-  });
+
   setTimeout(function(){
     console.log(votes.length);
     console.log(votes[10]);
     votes.forEach(function(vote){
-      vote.print();
+      $("body").append("<p>"+vote.date+": "+vote.description+"</p>")
     });
-}, 1000);
-
-  //console.log(JSON.parse(json.responseJSON));
-  /*console.log(results);
-  console.log(results[0]);
-  $.each(results, function(key, val){
-    console.log(key);
-    console.log(val);
-    $("body").append(val.VORLAGE_LANGBEZ);
-  });*/
+  }, 1000);
 });
