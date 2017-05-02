@@ -1,11 +1,23 @@
+var votes = [];
+
 $(document).ready(function(){
-  console.log("in");
-  var json = $.getJSON("results_kanton.json", function(data){
-    console.log("success");
+  $.getJSON("results_kanton.json", function(data){
+    $.each(data, function(key, val){
+      var vote = new Vote(val);
+      votes.push(vote);
+    });
   }).fail( function(d, textStatus, error) {
         console.error("getJSON failed, status: " + textStatus + ", error: "+error)
   });
-  console.log(JSON.parse(json.responseJSON));
+  setTimeout(function(){
+    console.log(votes.length);
+    console.log(votes[10]);
+    votes.forEach(function(vote){
+      vote.print();
+    });
+}, 1000);
+
+  //console.log(JSON.parse(json.responseJSON));
   /*console.log(results);
   console.log(results[0]);
   $.each(results, function(key, val){

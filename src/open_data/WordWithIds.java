@@ -54,14 +54,14 @@ public class WordWithIds {
 		}
 		if(word2.contains(word1)){
 			addId(id);
-			if(word2.length() - word1.length() <= 2 && word1.charAt(0) == word2.charAt(0)){
+			if(word2.length() - word1.length() <= 2 && word2.substring(0, word1.length()).equals(word1)){
 				return this;
 			} else {
 				return new WordWithIds(word, id);
 			}
 		}
 		if(word1.contains(word2)){
-			if(word1.length() - word2.length() <= 2 && word1.charAt(0) == word2.charAt(0)){
+			if(word1.length() - word2.length() <= 2 && word1.substring(0, word2.length()).equals(word2)){
 				setNewWord(word);
 				return this;
 			} else {

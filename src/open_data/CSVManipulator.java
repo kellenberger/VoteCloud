@@ -2,7 +2,6 @@ package open_data;
 
 import java.io.*;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class CSVManipulator {
 	
@@ -94,19 +93,30 @@ public class CSVManipulator {
 	private static LinkedList<WordWithIds> selectSignificantWords(LinkedList<WordWithIds> wordList){
 		LinkedList<WordWithIds> newList = new LinkedList<WordWithIds>();
 		LinkedList<Integer> includedIds = new LinkedList<Integer>();
+		LinkedList<String> usedWords = new LinkedList<String>();
 		Iterator<WordWithIds> it = wordList.iterator();
+		String[] badWords = new String[] {"Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember", 
+				"betreffend", "Art", "BBl", "Teil", "Neu", "Artikel", "Mass"};
 		while(it.hasNext()){
 			WordWithIds next = it.next();
+			if(Arrays.asList(badWords).contains(next.getWord()) || usedWords.contains(next.getWord()))
+				continue;
 			Integer[] ids = next.getIds().toArray(new Integer[next.getIds().size()]);
-			boolean containsUnusedId = false;
+			boolean containsUnusedId;
+			if(next.getCount()>20)
+				containsUnusedId = true;
+			else
+				containsUnusedId = false;
 			for(int id : ids){
 				if(!includedIds.contains(id)){
 					containsUnusedId = true;
 					includedIds.add(id);
 				}
 			}
-			if(containsUnusedId)
+			if(containsUnusedId){
 				newList.add(next);
+				usedWords.add(next.getWord());
+			}
 		}
 		System.out.println("\n\n\nAbgedeckte Vorlagen: "+includedIds.size()+"\n\n");
 		return newList;
