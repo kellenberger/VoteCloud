@@ -1,7 +1,8 @@
 // vote constructor
 function Vote(object){
   this.id = parseInt(object.STAT_VORLAGE_ID);
-  this.date = object.ABSTIMMUNGSTAG;
+  var date = object.ABSTIMMUNGSTAG.split(".");
+  this.date = new Date(date[2]+"-"+date[1]+"-"+date[0]);
   this.shortDescription = object.VORLAGE_KURZBEZ;
   this.description = object.VORLAGE_LANGBEZ;
   this.type = object.VORLAGENART;
