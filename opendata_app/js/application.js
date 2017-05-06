@@ -1,7 +1,8 @@
 // stores the votes and WordsWithIds which are displayed right now
 // allows a "back" action
-var displayedVotesStack = [];
-var displayedWordsWithIdsStack = [];
+var votesArray;
+var possibleWordsWithIdsStack = [];
+var displayedWords = [];
 
 // stores the word and ids pairs of all words. Is calculated initially and can later be reused.
 var calculatedWordsHash = {};
@@ -17,7 +18,7 @@ if (!String.prototype.includes) {
 function loadWords(){
   var badWords = ["januar", "februar", "märz", "april", "mai", "juni", "juli", "august", "september", "oktober", "november", "dezember",
 				"betreffend", "art", "bbl", "teil", "neu", "artikel", "mass", "der", "gegen", "pro", "schluss", "aug", "ein", "urs", "bei", "für", "nach", "mit", "gesetz", "beschluss"];
-  var currentVotes = displayedVotesStack[displayedVotesStack.length-1];   // get the current votes
+  var currentVotes = votesArray;   // get the current votes
   var newWordList = [];
   var wordHash = {};
   for(var i = 0; i<currentVotes.length; ++i){
@@ -72,10 +73,7 @@ function loadWords(){
     }
   }
   calculatedWordsHash = wordHash;
-}
 
-function displayWordCloud(){
-  var wordHash = calculatedWordsHash;
   var hashKeys = Object.keys(wordHash);
   var wordList = [];
   for(var i=0; i<hashKeys.length; ++i){
@@ -86,6 +84,12 @@ function displayWordCloud(){
   wordList.sort(function(word1, word2){
     return word2.ids.size - word1.ids.size;
   });
+  possibleWordsWithIdsStack.push(wordList);
+}
+
+function displayWordCloud(){
+  $("svg").remove();
+  var wordList = possibleWordsWithIdsStack[possibleWordsWithIdsStack.length-1];
   var trimmedWordList = [];
   var ids = new Set();
   for(var i=0; i<wordList.length; ++i){
@@ -94,9 +98,13 @@ function displayWordCloud(){
       ids = new Set([...ids, ...wordList[i].ids]);
     }
   }
-  console.log(ids.size);
-  console.log(trimmedWordList.length);
-  console.log("finished my part");
+  if(trimmedWordList.length < 50){
+    for(var i=0; i<wordList.length && trimmedWordList.length < 50; ++i){
+      if(trimmedWordList.indexOf(wordList[i])==-1){
+        trimmedWordList.push(wordList[i]);
+      }
+    }
+  }
 
   var fill = d3.scale.category20();
 
@@ -142,6 +150,39 @@ function isSameWord(word1, word2){
 
 }
 
+function calculateNewList(){
+  var matchingIds = calculatedWordsHash[displayedWords[0]];
+  for(var i=1; i<displayedWords.length; ++i){
+    matchingIds = matchingIds.filter(function(id){ return calculatedWordsHash[displayedWords[i]].has(id)});
+  }
+  var newWordList = [];
+  for(var i=0; i<possibleWordsWithIdsStack[0].length; ++i){
+    var wordWithIds = possibleWordsWithIdsStack[0][i];
+    if(displayedWords.indexOf(wordWithIds.word)!=-1){
+      continue;
+    }
+    var newWord = new WordWithIds(wordWithIds.word, wordWithIds.ids.filter(function(id){return matchingIds.has(id);}));
+    if(newWord.ids.size != 0){
+      newWordList.push(newWord);
+    }
+  }
+  newWordList.sort(function(word1, word2){
+    return word2.ids.size - word1.ids.size;
+  });
+  possibleWordsWithIdsStack.push(newWordList);
+  return matchingIds.size;
+}
+
+Set.prototype.filter = function(f) {
+  var newSet = new Set();
+  for (var v of this){
+    if(f(v)){
+      newSet.add(v);
+    }
+  }
+  return newSet;
+};
+
 $(document).ready(function(){
   // loads the json with the results of all votes
   $.getJSON("results_kanton.json", function(data){
@@ -150,10 +191,22 @@ $(document).ready(function(){
       var vote = new Vote(val);
       votes.push(vote);
     });
-    displayedVotesStack.push(votes);
+    votesArray = votes;
     loadWords();
     displayWordCloud();
   }).fail( function(d, textStatus, error) {
         console.error("getJSON failed, status: " + textStatus + ", error: "+error)
+  });
+
+  $("body").on("click", "text", function(event){
+    var selectedWord = $(this).html().toLowerCase();
+    displayedWords.push(selectedWord);
+    console.log(displayedWords);
+    var count = calculateNewList();
+    if(count <= 25){
+      console.log(count+" Einträge passen dazu");
+    } else {
+      displayWordCloud();
+    }
   });
 });
