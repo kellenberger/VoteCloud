@@ -7,8 +7,8 @@ function Vote(object){
   this.description = object.VORLAGE_LANGBEZ;
   this.type = object.VORLAGENART;
   this.voteDescription = object.ABSTIMMUNGSART_BEZ;
-  this.yesPercentage = object.JA_ANTEIL_PROZENT;
-  this.voteParticipation = object.STIMMBETEILIGUNG;
+  this.yesPercentage = parseFloat(object.JA_ANTEIL_PROZENT);
+  this.voteParticipation = parseFloat(object.STIMMBETEILIGUNG);
 }
 
 Vote.prototype.print = function(){

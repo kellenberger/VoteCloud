@@ -2,17 +2,48 @@
 <html lang="de">
 
 <head>
-    <title>Zürich Voting Development</title>
+    <title>Voting Dev</title>
     <meta name="description" content="Beschreibung der Applikation">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <link type="text/css" rel="stylesheet" href="css/application.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/application.css">
     <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
     <script type="text/javascript" src="js/d3.js"></script>
     <script type="text/javascript" src="js/d3.layout.cloud.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/classes/Vote.js"></script>
     <script type="text/javascript" src="js/classes/WordWithIds.js"></script>
     <script type="text/javascript" src="js/application.js"></script>
 </head>
 <body>
+  <div class="container">
+    <h3 class="blue-grey-text">Zürich Voting Development</h3>
+    <nav>
+      <div class="nav-wrapper blue-grey">
+        <div class="col s12 breadcrumb-wrapper">
+          <a href="#!" id="overview" class="breadcrumb">Übersicht</a>
+        </div>
+      </div>
+    </nav>
+    <div class="row">
+      <div id="vote-count" class="col s12" hidden>
+        <b></b> passende Abstimungen gefunden
+      </div>
+      <div id="content-wrapper" class="col s12">
+        <div class="preloader-wrapper big active">
+    <div class="spinner-layer spinner-blue-grey-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div><div class="gap-patch">
+        <div class="circle"></div>
+      </div><div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
 </body>

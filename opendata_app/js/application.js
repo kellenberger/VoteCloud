@@ -3,6 +3,7 @@
 var votesArray;
 var possibleWordsWithIdsStack = [];
 var displayedWords = [];
+var displayedIds = [];
 
 // stores the word and ids pairs of all words. Is calculated initially and can later be reused.
 var calculatedWordsHash = {};
@@ -17,7 +18,8 @@ if (!String.prototype.includes) {
 // loads the words for the wordcloud
 function loadWords(){
   var badWords = ["januar", "februar", "märz", "april", "mai", "juni", "juli", "august", "september", "oktober", "november", "dezember",
-				"betreffend", "art", "bbl", "teil", "neu", "artikel", "mass", "der", "gegen", "pro", "schluss", "aug", "ein", "urs", "bei", "für", "nach", "mit", "gesetz", "beschluss"];
+				"betreffend", "art", "bbl", "teil", "neu", "artikel", "mass", "der", "gegen", "pro", "schluss", "aug", "ein", "urs", "bei", "für", "nach",
+        "mit", "gesetz", "beschluss", "abl"];
   var currentVotes = votesArray;   // get the current votes
   var newWordList = [];
   var wordHash = {};
@@ -89,6 +91,8 @@ function loadWords(){
 
 function displayWordCloud(){
   $("svg").remove();
+  $("table").remove();
+  $(".preloader-wrapper").remove();
   var wordList = possibleWordsWithIdsStack[possibleWordsWithIdsStack.length-1];
   var trimmedWordList = [];
   var ids = new Set();
@@ -98,6 +102,8 @@ function displayWordCloud(){
       ids = new Set([...ids, ...wordList[i].ids]);
     }
   }
+  displayedIds.push(ids);
+  $("#vote-count b").html(ids.size);
   if(trimmedWordList.length < 50){
     for(var i=0; i<wordList.length && trimmedWordList.length < 50; ++i){
       if(trimmedWordList.indexOf(wordList[i])==-1){
@@ -116,14 +122,15 @@ function displayWordCloud(){
   d3.layout.cloud().size([960, 600])
       .words(words)
       .padding(5)
-      .rotate(function() { return ~~(Math.random() * 2) *90; })
+      .rotate(function() { return ~~(Math.random() * 2) *90; }) // ~~(Math.random() * 2) *90
       .font("Impact")
       .fontSize(function(d) { return d.size; })
       .on("end", draw)
       .start();
 
   function draw(words) {
-    d3.select("body").append("svg")
+    d3.select("#content-wrapper").append("svg")
+        .attr("viewbox", "0 0 960 600")
         .attr("width", 960)
         .attr("height", 600)
       .append("g")
@@ -170,7 +177,7 @@ function calculateNewList(){
     return word2.ids.size - word1.ids.size;
   });
   possibleWordsWithIdsStack.push(newWordList);
-  return matchingIds.size;
+  return matchingIds;
 }
 
 Set.prototype.filter = function(f) {
@@ -191,21 +198,73 @@ $(document).ready(function(){
       var vote = new Vote(val);
       votes.push(vote);
     });
+    votes.sort(function(vote1, vote2){
+      return vote2.date - vote1.date;
+    });
     votesArray = votes;
     loadWords();
+    $("#vote-count").show();
     displayWordCloud();
   }).fail( function(d, textStatus, error) {
         console.error("getJSON failed, status: " + textStatus + ", error: "+error)
   });
 
   $("body").on("click", "text", function(event){
-    var selectedWord = $(this).html().toLowerCase();
-    displayedWords.push(selectedWord);
-    console.log(displayedWords);
-    var count = calculateNewList();
-    if(count <= 25){
-      console.log(count+" Einträge passen dazu");
+    var selectedWord = $(this).html();
+    $(".breadcrumb-wrapper").append("<a href=\"#!\" class=\"breadcrumb\">"+selectedWord+"</a>");
+    displayedWords.push(selectedWord.toLowerCase());
+    var displayedIds = calculateNewList();
+    if(displayedIds.size <= 25){
+      $("#vote-count b").html(displayedIds.size);
+      $("svg").remove();
+      var appendString = "<table class=\"bordered highlight\"><thead><tr><th>Datum</th><th>Abstimmungs Langbezeichnung</th><th>Ja Stimmen</th></tr></thead><tbody>";
+      for(var i=0; i<votesArray.length; ++i){
+        var vote = votesArray[i];
+        if(displayedIds.has(vote.id)){
+          var day = vote.date.getDate();
+          if(day<10){
+            day = "0"+day;
+          }
+          var month = vote.date.getMonth()+1;
+          if(month<10){
+            month = "0"+month;
+          }
+          var year = vote.date.getFullYear();
+          var color = "red";
+          var yesPercentage = vote.yesPercentage;
+          if(yesPercentage>50){
+            color = "green";
+          }
+          appendString += "<tr><td>"+day+"."+month+"."+year+"</td><td>"+vote.description+"</td><td class=\""+color+"-text\">"+yesPercentage+"%</td></tr>";
+        }
+      }
+      appendString+="</tbody></table>";
+      $("#content-wrapper").append(appendString);
     } else {
+      displayWordCloud();
+    }
+  });
+
+  $("body").on("click", ".breadcrumb", function(event){
+    if($(this).is("#overview")){
+      $(".breadcrumb:not(#overview)").remove();
+      displayedWords = [];
+      $("#vote-count b").html(displayedIds[0].size);
+      while(possibleWordsWithIdsStack.length > 1){
+        possibleWordsWithIdsStack.pop();
+      }
+      while(displayedIds.length > 1){
+        displayedIds.pop();
+      }
+      displayWordCloud();
+    } else {
+      var word = $(this).html().toLowerCase();
+      while(word.localeCompare(displayedWords[displayedWords.length-1])!=0){
+        displayedWords.pop();
+        $(".breadcrumb").last().remove();
+        possibleWordsWithIdsStack.pop();
+        displayedIds.pop();
+      }
       displayWordCloud();
     }
   });
