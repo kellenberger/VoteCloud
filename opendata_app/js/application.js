@@ -1,9 +1,9 @@
 $(document).ready(function(){
   //initializes the help modal
   $('.modal').modal();
-  
+
   // loads the json with the results of all votes
-  $.getJSON("results_kanton.json", function(data){
+  $.getJSON("json/results_kanton.json", function(data){
     var votes = [];
     $.each(data, function(key, val){
       var vote = new Vote(val);

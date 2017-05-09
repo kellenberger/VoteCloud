@@ -1,12 +1,83 @@
 package open_data;
 
 import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.*;
 
 public class CSVManipulator {
 	
 	public static void main(String[] args){
-		readLongDescriptionsFromCSV();
+		readCSVAndWriteAsJSON();
+	}
+	
+	private static void readCSVAndWriteAsJSON(){
+		String csvFile = "KANTON_ZUERICH_abstimmungsarchiv_gemeinden.csv";
+		BufferedReader br = null;
+		String line = "";
+		String cvsSplitBy = ",";
+		Charset charset = Charset.forName("UTF-8");
+		
+		try{
+			br = new BufferedReader(new InputStreamReader(new FileInputStream(csvFile), "UTF-8"));
+			line = br.readLine();
+			while ((line = br.readLine()) != null) {
+				String[] lineData = line.split(cvsSplitBy);
+				String filename = "opendata_app/json/"+lineData[1]+".json";
+				LinkedList<String> it = new LinkedList<String>();
+				it.add("{");
+				it.add("\"GEMEINDE\": "+lineData[6]+",");
+				it.add("\"BEZIRK\": "+lineData[7]+",");
+				it.add("\"AZ_GÜLTIGE_STIMMZETTEL\": "+lineData[11]+",");
+				it.add("\"AZ_JA_STIMMEN\": "+lineData[12]);
+				it.add("}");
+				
+				File f = new File(filename);
+				if(!f.exists() || f.isDirectory()) { 
+					it.add(0,"[");
+					try {
+					    Files.write(Paths.get(filename), it, charset);
+					}catch (IOException e) {
+					    e.printStackTrace();
+					}
+				} else {
+					it.add(0, ",");
+					try {
+					    Files.write(Paths.get(filename), it, charset, StandardOpenOption.APPEND);
+					}catch (IOException e) {
+					    e.printStackTrace();
+					}
+				}
+			}
+			LinkedList<String> it = new LinkedList<String>();
+			it.add("]");
+			for(int i = 1; i < 3000; ++i){
+				String filename = "opendata_app/json/"+i+".json";
+				File f = new File(filename);
+				if(f.exists() && !f.isDirectory()){
+					try {
+					    Files.write(Paths.get(filename), it, charset, StandardOpenOption.APPEND);
+					}catch (IOException e) {
+					    e.printStackTrace();
+					}
+				}
+				
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (br != null) {
+				try {
+					br.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
 	}
 
 	private static void readLongDescriptionsFromCSV() {
