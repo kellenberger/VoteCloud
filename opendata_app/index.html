@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/application.css">
     <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="js/jquery.mark.min.js"></script>
     <script type="text/javascript" src="js/d3.js"></script>
     <script type="text/javascript" src="js/d3.layout.cloud.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -31,19 +32,26 @@
       <div id="vote-count" class="col s12" hidden>
         <b></b> passende Abstimungen gefunden
       </div>
-      <div id="content-wrapper" class="col s12">
-        <div class="preloader-wrapper big active">
-    <div class="spinner-layer spinner-blue-grey-only">
-      <div class="circle-clipper left">
-        <div class="circle"></div>
-      </div><div class="gap-patch">
-        <div class="circle"></div>
-      </div><div class="circle-clipper right">
-        <div class="circle"></div>
-      </div>
+      <div id="content-wrapper">
+      <div class="preloader-wrapper big active">
+  <div class="spinner-layer spinner-blue-grey-only">
+    <div class="circle-clipper left">
+      <div class="circle"></div>
+    </div><div class="gap-patch">
+      <div class="circle"></div>
+    </div><div class="circle-clipper right">
+      <div class="circle"></div>
     </div>
   </div>
-      </div>
+</div>
+      <div id="svg-wrapper" class="col s12">
+
     </div>
+  </div>
+  </div>
+  <div class="fixed-action-btn">
+    <a style="font-size: 30px" class="btn-floating btn-large blue">
+      ?
+    </a>
   </div>
 </body>

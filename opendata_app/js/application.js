@@ -90,9 +90,7 @@ function loadWords(){
 }
 
 function displayWordCloud(){
-  $("svg").remove();
-  $("table").remove();
-  $(".preloader-wrapper").remove();
+  $(".preloader-wrapper").hide();
   var wordList = possibleWordsWithIdsStack[possibleWordsWithIdsStack.length-1];
   var trimmedWordList = [];
   var ids = new Set();
@@ -129,7 +127,7 @@ function displayWordCloud(){
       .start();
 
   function draw(words) {
-    d3.select("#content-wrapper").append("svg")
+    d3.select("#svg-wrapper").append("svg")
         .attr("viewbox", "0 0 960 600")
         .attr("width", 960)
         .attr("height", 600)
@@ -210,11 +208,15 @@ $(document).ready(function(){
   });
 
   $("body").on("click", "text", function(event){
+    $("svg").remove();
+    $("table").remove();
+    $(".preloader-wrapper").show();
     var selectedWord = $(this).html();
     $(".breadcrumb-wrapper").append("<a href=\"#!\" class=\"breadcrumb\">"+selectedWord+"</a>");
     displayedWords.push(selectedWord.toLowerCase());
     var displayedIds = calculateNewList();
     if(displayedIds.size <= 25){
+      $(".preloader-wrapper").hide();
       $("#vote-count b").html(displayedIds.size);
       $("svg").remove();
       var appendString = "<table class=\"bordered highlight\"><thead><tr><th>Datum</th><th>Abstimmungs Langbezeichnung</th><th>Ja Stimmen</th></tr></thead><tbody>";
@@ -239,13 +241,17 @@ $(document).ready(function(){
         }
       }
       appendString+="</tbody></table>";
-      $("#content-wrapper").append(appendString);
+      $("#svg-wrapper").append(appendString);
+      $("table").mark(displayedWords);
     } else {
       displayWordCloud();
     }
   });
 
   $("body").on("click", ".breadcrumb", function(event){
+    $("svg").remove();
+    $("table").remove();
+    $(".preloader-wrapper").show();
     if($(this).is("#overview")){
       $(".breadcrumb:not(#overview)").remove();
       displayedWords = [];

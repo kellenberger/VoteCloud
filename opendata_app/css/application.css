@@ -4,3 +4,25 @@ text{
 .breadcrumb{
   padding-left: 5px;
 }
+mark{
+  background-color: rgb(255, 255, 230);
+}
+#content-wrapper{
+  position: relative;
+  width: 100%;
+  padding-top: 62.5%;
+}
+.preloader-wrapper{
+  display: block;
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  vertical-align: middle;
+}
+#svg-wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
