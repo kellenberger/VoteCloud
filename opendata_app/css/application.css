@@ -26,3 +26,9 @@ mark{
   bottom: 0;
   right: 0;
 }
+.breadcrumb-wrapper {
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
