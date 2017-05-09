@@ -2,21 +2,22 @@
 <html lang="de">
 
 <head>
-    <title>Voting Dev</title>
-    <meta name="description" content="Beschreibung der Applikation">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/application.css">
-    <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
-    <script type="text/javascript" src="js/jquery.mark.min.js"></script>
-    <script type="text/javascript" src="js/d3.js"></script>
-    <script type="text/javascript" src="js/d3.layout.cloud.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/classes/Vote.js"></script>
-    <script type="text/javascript" src="js/classes/WordWithIds.js"></script>
-    <script type="text/javascript" src="js/application.js"></script>
+  <title>Voting Dev</title>
+  <meta name="description" content="Beschreibung der Applikation">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/application.css">
+  <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="js/jquery.mark.min.js"></script>
+  <script type="text/javascript" src="js/d3.js"></script>
+  <script type="text/javascript" src="js/d3.layout.cloud.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/classes/Vote.js"></script>
+  <script type="text/javascript" src="js/classes/WordWithIds.js"></script>
+  <script type="text/javascript" src="js/functions.js"></script>
+  <script type="text/javascript" src="js/application.js"></script>
 </head>
 <body>
   <div class="container">
@@ -33,25 +34,37 @@
         <b></b> passende Abstimungen gefunden
       </div>
       <div id="content-wrapper">
-      <div class="preloader-wrapper big active">
-  <div class="spinner-layer spinner-blue-grey-only">
-    <div class="circle-clipper left">
-      <div class="circle"></div>
-    </div><div class="gap-patch">
-      <div class="circle"></div>
-    </div><div class="circle-clipper right">
-      <div class="circle"></div>
-    </div>
-  </div>
-</div>
-      <div id="svg-wrapper" class="col s12">
+        <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-blue-grey-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+        <div id="svg-wrapper" class="col s12">
 
+        </div>
+      </div>
+    </div>
+    <div class="fixed-action-btn">
+      <a style="font-size: 30px" class="btn-floating waves-effect waves-light btn-large blue" href="#help-modal">
+        ?
+      </a>
     </div>
   </div>
-  </div>
-  <div class="fixed-action-btn">
-    <a style="font-size: 30px" class="btn-floating btn-large blue">
-      ?
-    </a>
+  <div id="help-modal" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Hilfe/Information</h4>
+      <p>Hier kommt eine Anleitung zur Verwendung der App rein</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Schliessen</a>
+    </div>
   </div>
 </body>

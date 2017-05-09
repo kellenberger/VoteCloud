@@ -10,7 +10,3 @@ function Vote(object){
   this.yesPercentage = parseFloat(object.JA_ANTEIL_PROZENT);
   this.voteParticipation = parseFloat(object.STIMMBETEILIGUNG);
 }
-
-Vote.prototype.print = function(){
-  console.log(this.date+" "+this.shortDescription);
-}
