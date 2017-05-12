@@ -9,11 +9,11 @@
   <link rel="stylesheet" href="css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/application.css">
-  <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
-  <script type="text/javascript" src="js/jquery.mark.min.js"></script>
-  <script type="text/javascript" src="js/d3.js"></script>
-  <script type="text/javascript" src="js/d3.layout.cloud.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/libraries/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="js/libraries/jquery.mark.min.js"></script>
+  <script type="text/javascript" src="js/libraries/d3.js"></script>
+  <script type="text/javascript" src="js/libraries/d3.layout.cloud.js"></script>
+  <script type="text/javascript" src="js/libraries/materialize.min.js"></script>
   <script type="text/javascript" src="js/classes/Vote.js"></script>
   <script type="text/javascript" src="js/classes/WordWithIds.js"></script>
   <script type="text/javascript" src="js/functions.js"></script>
@@ -47,8 +47,24 @@
             </div>
           </div>
         </div>
-        <div id="svg-wrapper" class="col s12">
+        <div id="details-wrapper" class="col s12 wrapper">
 
+        </div>
+        <div id="single-vote-wrapper" class="col s12 wrapper" hidden>
+          <h5 id="description"></h5>
+          <div class="row section">
+            <div class="col m3 s6 label">Vorlagenart:</div>
+            <div id="type" class="col m3 s6"></div>
+            <div class="col m3 s6 label">Abstimmungsart:</div>
+            <div id="vote-description" class="col m3 s6"></div>
+          </div>
+          <div class="row section">
+            <div class="col m3 s6 label">Ja-Stimmen Prozent:</div>
+            <div id="yes-percentage" class="col m3 s6"></div>
+            <div class="col m3 s6 label">Stimmbeteiligung:</div>
+            <div id="vote-participation" class="col m3 s6"></div>
+          </div>
+          <div id = "graph"></div>
         </div>
       </div>
     </div>

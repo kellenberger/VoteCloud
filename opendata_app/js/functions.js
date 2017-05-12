@@ -127,7 +127,7 @@ function displayWordCloud(){
 
   function draw(words) {
     $(".preloader-wrapper").hide();
-    d3.select("#svg-wrapper").append("svg")
+    d3.select("#details-wrapper").append("svg")
     .attr("viewbox", "0 0 960 600")
     .attr("width", 960)
     .attr("height", 600)
@@ -209,12 +209,12 @@ function showDetailTable(ids){
       if(yesPercentage>50){
         color = "green";
       }
-      appendString += "<tr><td>"+day+"."+month+"."+year+"</td><td>"+vote.description+"</td><td class=\""+color+"-text\">"+yesPercentage+"%</td></tr>";
+      appendString += "<tr class=\"vote-row\"><input class=\"vote-id\" type=\"hidden\" value=\""+vote.id+"\"><td>"+day+"."+month+"."+year+"</td><td>"+vote.description+"</td><td class=\""+color+"-text\">"+yesPercentage+"%</td></tr>";
     }
   }
   appendString+="</tbody></table>";
   $(".preloader-wrapper").hide();
-  $("#svg-wrapper").append(appendString);
+  $("#details-wrapper").append(appendString);
   $("table").mark(displayedWords);
 }
 
@@ -239,4 +239,28 @@ function jumpToBreadcrumb(word){
     displayedIds.pop();
   }
   displayWordCloud();
+}
+
+function showVoteDetails(voteId){
+  var vote;
+  for(var i=0; i<votesArray.length; ++i){
+    if(votesArray[i].id == voteId){
+      vote = votesArray[i];
+      break;
+    }
+  }
+  $(".preloader-wrapper").hide();
+  $("#single-vote-wrapper").show();
+  $("#description").html(vote.description);
+  $("#type").html(vote.type);
+  $("#vote-description").html(vote.voteDescription);
+  $("#yes-percentage").html(vote.yesPercentage);
+  $("#vote-participation").html(vote.voteParticipation);
+  $.getJSON("json/"+voteId+".json", function(data){
+    $.each(data, function(key, val){
+      $("#graph").append("<p>"+val.GEMEINDE+": "+val.AZ_JA_STIMMEN/val.AZ_GÜLTIGE_STIMMZETTEL+"%</p>");
+    });
+  }).fail( function(d, textStatus, error) {
+    console.error("getJSON failed, status: " + textStatus + ", error: "+error)
+  });
 }

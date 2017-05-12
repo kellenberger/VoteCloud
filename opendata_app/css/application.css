@@ -11,6 +11,7 @@ mark{
   position: relative;
   width: 100%;
   padding-top: 62.5%;
+  top: 20px;
 }
 .preloader-wrapper{
   display: block;
@@ -19,7 +20,7 @@ mark{
   left: calc(50% - 32px);
   vertical-align: middle;
 }
-#svg-wrapper{
+#content-wrapper .wrapper{
   position: absolute;
   top: 0;
   left: 0;
@@ -31,4 +32,7 @@ mark{
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.label{
+  font-weight: bold;
 }

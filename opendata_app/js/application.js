@@ -46,4 +46,11 @@ $(document).ready(function(){
       jumpToBreadcrumb(word);
     }
   });
+
+  $("body").on("click", "tr.vote-row", function(event){
+    $("#details-wrapper").hide();
+    $(".preloader-wrapper").show();
+    var voteId = $(this).find("input.vote-id").val();
+    showVoteDetails(voteId);
+  });
 });
