@@ -2,6 +2,7 @@
 {
 "GEMEINDE": "Aeugst a.A.",
 "BEZIRK": "Affoltern",
+"STIMMBETEILIGUNG": "   45.51",
 "AZ_GÜLTIGE_STIMMZETTEL": 478,
 "AZ_JA_STIMMEN": 167
 }
@@ -9,6 +10,7 @@
 {
 "GEMEINDE": "Affoltern a.A.",
 "BEZIRK": "Affoltern",
+"STIMMBETEILIGUNG": "   39.90",
 "AZ_GÜLTIGE_STIMMZETTEL": 2236,
 "AZ_JA_STIMMEN": 678
 }
@@ -16,6 +18,7 @@
 {
 "GEMEINDE": "Bonstetten",
 "BEZIRK": "Affoltern",
+"STIMMBETEILIGUNG": "   40.95",
 "AZ_GÜLTIGE_STIMMZETTEL": 1045,
 "AZ_JA_STIMMEN": 358
 }
@@ -23,6 +26,7 @@
 {
 "GEMEINDE": "Hausen a.A.",
 "BEZIRK": "Affoltern",
+"STIMMBETEILIGUNG": "   38.78",
 "AZ_GÜLTIGE_STIMMZETTEL": 792,
 "AZ_JA_STIMMEN": 281
 }
@@ -30,6 +34,7 @@
 {
 "GEMEINDE": "Hedingen",
 "BEZIRK": "Affoltern",
+"STIMMBETEILIGUNG": "   43.60",
 "AZ_GÜLTIGE_STIMMZETTEL": 791,
 "AZ_JA_STIMMEN": 246
 }
@@ -37,6 +42,7 @@
 {
 "GEMEINDE": "Kappel a.A.",
 "BEZIRK": "Affoltern",
+"STIMMBETEILIGUNG": "   43.95",
 "AZ_GÜLTIGE_STIMMZETTEL": 264,
 "AZ_JA_STIMMEN": 56
 }
@@ -44,6 +50,7 @@
 {
 "GEMEINDE": "Knonau",
 "BEZIRK": "Affoltern",
+"STIMMBETEILIGUNG": "   51.73",
 "AZ_GÜLTIGE_STIMMZETTEL": 468,
 "AZ_JA_STIMMEN": 145
 }
@@ -51,6 +58,7 @@
 {
 "GEMEINDE": "Maschwanden",
 "BEZIRK": "Affoltern",
+"STIMMBETEILIGUNG": "   49.73",
 "AZ_GÜLTIGE_STIMMZETTEL": 179,
 "AZ_JA_STIMMEN": 43
 }
@@ -58,6 +66,7 @@
 {
 "GEMEINDE": "Mettmenstetten",
 "BEZIRK": "Affoltern",
+"STIMMBETEILIGUNG": "   45.47",
 "AZ_GÜLTIGE_STIMMZETTEL": 1081,
 "AZ_JA_STIMMEN": 357
 }
@@ -65,6 +74,7 @@
 {
 "GEMEINDE": "Obfelden",
 "BEZIRK": "Affoltern",
+"STIMMBETEILIGUNG": "   37.58",
 "AZ_GÜLTIGE_STIMMZETTEL": 1002,
 "AZ_JA_STIMMEN": 311
 }
@@ -72,6 +82,7 @@
 {
 "GEMEINDE": "Ottenbach",
 "BEZIRK": "Affoltern",
+"STIMMBETEILIGUNG": "   40.40",
 "AZ_GÜLTIGE_STIMMZETTEL": 618,
 "AZ_JA_STIMMEN": 214
 }
@@ -79,6 +90,7 @@
 {
 "GEMEINDE": "Rifferswil",
 "BEZIRK": "Affoltern",
+"STIMMBETEILIGUNG": "   54.33",
 "AZ_GÜLTIGE_STIMMZETTEL": 264,
 "AZ_JA_STIMMEN": 102
 }
@@ -86,6 +98,7 @@
 {
 "GEMEINDE": "Stallikon",
 "BEZIRK": "Affoltern",
+"STIMMBETEILIGUNG": "   39.18",
 "AZ_GÜLTIGE_STIMMZETTEL": 714,
 "AZ_JA_STIMMEN": 226
 }
@@ -93,6 +106,7 @@
 {
 "GEMEINDE": "Wettswil a.A.",
 "BEZIRK": "Affoltern",
+"STIMMBETEILIGUNG": "   44.90",
 "AZ_GÜLTIGE_STIMMZETTEL": 1141,
 "AZ_JA_STIMMEN": 274
 }
@@ -100,6 +114,7 @@
 {
 "GEMEINDE": "Adlikon",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   55.50",
 "AZ_GÜLTIGE_STIMMZETTEL": 219,
 "AZ_JA_STIMMEN": 37
 }
@@ -107,6 +122,7 @@
 {
 "GEMEINDE": "Andelfingen",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   51.34",
 "AZ_GÜLTIGE_STIMMZETTEL": 558,
 "AZ_JA_STIMMEN": 141
 }
@@ -114,6 +130,7 @@
 {
 "GEMEINDE": "Benken",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   50.20",
 "AZ_GÜLTIGE_STIMMZETTEL": 244,
 "AZ_JA_STIMMEN": 56
 }
@@ -121,6 +138,7 @@
 {
 "GEMEINDE": "Berg a.I.",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   50.39",
 "AZ_GÜLTIGE_STIMMZETTEL": 184,
 "AZ_JA_STIMMEN": 50
 }
@@ -128,6 +146,7 @@
 {
 "GEMEINDE": "Buch a.I.",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   41.82",
 "AZ_GÜLTIGE_STIMMZETTEL": 205,
 "AZ_JA_STIMMEN": 45
 }
@@ -135,6 +154,7 @@
 {
 "GEMEINDE": "Dachsen",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   47.81",
 "AZ_GÜLTIGE_STIMMZETTEL": 461,
 "AZ_JA_STIMMEN": 132
 }
@@ -142,6 +162,7 @@
 {
 "GEMEINDE": "Dorf",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   51.04",
 "AZ_GÜLTIGE_STIMMZETTEL": 195,
 "AZ_JA_STIMMEN": 48
 }
@@ -149,6 +170,7 @@
 {
 "GEMEINDE": "Feuerthalen",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   41.21",
 "AZ_GÜLTIGE_STIMMZETTEL": 773,
 "AZ_JA_STIMMEN": 248
 }
@@ -156,6 +178,7 @@
 {
 "GEMEINDE": "Flaach",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   48.45",
 "AZ_GÜLTIGE_STIMMZETTEL": 352,
 "AZ_JA_STIMMEN": 70
 }
@@ -163,6 +186,7 @@
 {
 "GEMEINDE": "Flurlingen",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   49.20",
 "AZ_GÜLTIGE_STIMMZETTEL": 423,
 "AZ_JA_STIMMEN": 146
 }
@@ -170,6 +194,7 @@
 {
 "GEMEINDE": "Henggart",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   49.31",
 "AZ_GÜLTIGE_STIMMZETTEL": 526,
 "AZ_JA_STIMMEN": 124
 }
@@ -177,6 +202,7 @@
 {
 "GEMEINDE": "Humlikon",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   59.86",
 "AZ_GÜLTIGE_STIMMZETTEL": 167,
 "AZ_JA_STIMMEN": 37
 }
@@ -184,6 +210,7 @@
 {
 "GEMEINDE": "Kleinandelfingen",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   49.17",
 "AZ_GÜLTIGE_STIMMZETTEL": 588,
 "AZ_JA_STIMMEN": 149
 }
@@ -191,6 +218,7 @@
 {
 "GEMEINDE": "Laufen-Uhwiesen",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   45.70",
 "AZ_GÜLTIGE_STIMMZETTEL": 459,
 "AZ_JA_STIMMEN": 165
 }
@@ -198,6 +226,7 @@
 {
 "GEMEINDE": "Marthalen",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   48.07",
 "AZ_GÜLTIGE_STIMMZETTEL": 581,
 "AZ_JA_STIMMEN": 147
 }
@@ -205,6 +234,7 @@
 {
 "GEMEINDE": "Oberstammheim",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   55.58",
 "AZ_GÜLTIGE_STIMMZETTEL": 406,
 "AZ_JA_STIMMEN": 132
 }
@@ -212,6 +242,7 @@
 {
 "GEMEINDE": "Ossingen",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   47.75",
 "AZ_GÜLTIGE_STIMMZETTEL": 397,
 "AZ_JA_STIMMEN": 118
 }
@@ -219,6 +250,7 @@
 {
 "GEMEINDE": "Rheinau",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   40.74",
 "AZ_GÜLTIGE_STIMMZETTEL": 329,
 "AZ_JA_STIMMEN": 117
 }
@@ -226,6 +258,7 @@
 {
 "GEMEINDE": "Thalheim a.d.Th.",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   46.97",
 "AZ_GÜLTIGE_STIMMZETTEL": 214,
 "AZ_JA_STIMMEN": 56
 }
@@ -233,6 +266,7 @@
 {
 "GEMEINDE": "Trüllikon",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   43.84",
 "AZ_GÜLTIGE_STIMMZETTEL": 326,
 "AZ_JA_STIMMEN": 105
 }
@@ -240,6 +274,7 @@
 {
 "GEMEINDE": "Truttikon",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   45.85",
 "AZ_GÜLTIGE_STIMMZETTEL": 135,
 "AZ_JA_STIMMEN": 23
 }
@@ -247,6 +282,7 @@
 {
 "GEMEINDE": "Unterstammheim",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   40.61",
 "AZ_GÜLTIGE_STIMMZETTEL": 249,
 "AZ_JA_STIMMEN": 66
 }
@@ -254,6 +290,7 @@
 {
 "GEMEINDE": "Volken",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   50.54",
 "AZ_GÜLTIGE_STIMMZETTEL": 93,
 "AZ_JA_STIMMEN": 24
 }
@@ -261,6 +298,7 @@
 {
 "GEMEINDE": "Waltalingen",
 "BEZIRK": "Andelfingen",
+"STIMMBETEILIGUNG": "   50.11",
 "AZ_GÜLTIGE_STIMMZETTEL": 218,
 "AZ_JA_STIMMEN": 67
 }
@@ -268,6 +306,7 @@
 {
 "GEMEINDE": "Bachenbülach",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   35.46",
 "AZ_GÜLTIGE_STIMMZETTEL": 642,
 "AZ_JA_STIMMEN": 200
 }
@@ -275,6 +314,7 @@
 {
 "GEMEINDE": "Bassersdorf",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   36.24",
 "AZ_GÜLTIGE_STIMMZETTEL": 1640,
 "AZ_JA_STIMMEN": 492
 }
@@ -282,6 +322,7 @@
 {
 "GEMEINDE": "Bülach",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   41.93",
 "AZ_GÜLTIGE_STIMMZETTEL": 3577,
 "AZ_JA_STIMMEN": 959
 }
@@ -289,6 +330,7 @@
 {
 "GEMEINDE": "Dietlikon",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   38.10",
 "AZ_GÜLTIGE_STIMMZETTEL": 1501,
 "AZ_JA_STIMMEN": 412
 }
@@ -296,6 +338,7 @@
 {
 "GEMEINDE": "Eglisau",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   46.09",
 "AZ_GÜLTIGE_STIMMZETTEL": 860,
 "AZ_JA_STIMMEN": 217
 }
@@ -303,6 +346,7 @@
 {
 "GEMEINDE": "Embrach",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   33.61",
 "AZ_GÜLTIGE_STIMMZETTEL": 1464,
 "AZ_JA_STIMMEN": 385
 }
@@ -310,6 +354,7 @@
 {
 "GEMEINDE": "Freienstein-Teufen",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   38.08",
 "AZ_GÜLTIGE_STIMMZETTEL": 500,
 "AZ_JA_STIMMEN": 127
 }
@@ -317,6 +362,7 @@
 {
 "GEMEINDE": "Glattfelden",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   35.02",
 "AZ_GÜLTIGE_STIMMZETTEL": 728,
 "AZ_JA_STIMMEN": 210
 }
@@ -324,6 +370,7 @@
 {
 "GEMEINDE": "Hochfelden",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   38.31",
 "AZ_GÜLTIGE_STIMMZETTEL": 383,
 "AZ_JA_STIMMEN": 88
 }
@@ -331,6 +378,7 @@
 {
 "GEMEINDE": "Höri",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   30.46",
 "AZ_GÜLTIGE_STIMMZETTEL": 338,
 "AZ_JA_STIMMEN": 57
 }
@@ -338,6 +386,7 @@
 {
 "GEMEINDE": "Hüntwangen",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   45.20",
 "AZ_GÜLTIGE_STIMMZETTEL": 258,
 "AZ_JA_STIMMEN": 73
 }
@@ -345,6 +394,7 @@
 {
 "GEMEINDE": "Kloten",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   33.56",
 "AZ_GÜLTIGE_STIMMZETTEL": 3434,
 "AZ_JA_STIMMEN": 1038
 }
@@ -352,6 +402,7 @@
 {
 "GEMEINDE": "Lufingen",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   38.02",
 "AZ_GÜLTIGE_STIMMZETTEL": 292,
 "AZ_JA_STIMMEN": 82
 }
@@ -359,6 +410,7 @@
 {
 "GEMEINDE": "Nürensdorf",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   40.79",
 "AZ_GÜLTIGE_STIMMZETTEL": 1246,
 "AZ_JA_STIMMEN": 302
 }
@@ -366,6 +418,7 @@
 {
 "GEMEINDE": "Oberembrach",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   41.62",
 "AZ_GÜLTIGE_STIMMZETTEL": 295,
 "AZ_JA_STIMMEN": 64
 }
@@ -373,6 +426,7 @@
 {
 "GEMEINDE": "Opfikon",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   33.97",
 "AZ_GÜLTIGE_STIMMZETTEL": 2205,
 "AZ_JA_STIMMEN": 607
 }
@@ -380,6 +434,7 @@
 {
 "GEMEINDE": "Rafz",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   38.88",
 "AZ_GÜLTIGE_STIMMZETTEL": 775,
 "AZ_JA_STIMMEN": 182
 }
@@ -387,6 +442,7 @@
 {
 "GEMEINDE": "Rorbas",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   35.10",
 "AZ_GÜLTIGE_STIMMZETTEL": 477,
 "AZ_JA_STIMMEN": 148
 }
@@ -394,6 +450,7 @@
 {
 "GEMEINDE": "Wallisellen",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   38.27",
 "AZ_GÜLTIGE_STIMMZETTEL": 2918,
 "AZ_JA_STIMMEN": 723
 }
@@ -401,6 +458,7 @@
 {
 "GEMEINDE": "Wasterkingen",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   44.99",
 "AZ_GÜLTIGE_STIMMZETTEL": 171,
 "AZ_JA_STIMMEN": 63
 }
@@ -408,6 +466,7 @@
 {
 "GEMEINDE": "Wil",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   43.05",
 "AZ_GÜLTIGE_STIMMZETTEL": 388,
 "AZ_JA_STIMMEN": 119
 }
@@ -415,6 +474,7 @@
 {
 "GEMEINDE": "Winkel",
 "BEZIRK": "Bülach",
+"STIMMBETEILIGUNG": "   38.65",
 "AZ_GÜLTIGE_STIMMZETTEL": 867,
 "AZ_JA_STIMMEN": 195
 }
@@ -422,6 +482,7 @@
 {
 "GEMEINDE": "Bachs",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   49.76",
 "AZ_GÜLTIGE_STIMMZETTEL": 206,
 "AZ_JA_STIMMEN": 44
 }
@@ -429,6 +490,7 @@
 {
 "GEMEINDE": "Boppelsen",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   50.64",
 "AZ_GÜLTIGE_STIMMZETTEL": 350,
 "AZ_JA_STIMMEN": 74
 }
@@ -436,6 +498,7 @@
 {
 "GEMEINDE": "Buchs",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   31.71",
 "AZ_GÜLTIGE_STIMMZETTEL": 785,
 "AZ_JA_STIMMEN": 187
 }
@@ -443,6 +506,7 @@
 {
 "GEMEINDE": "Dällikon",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   31.58",
 "AZ_GÜLTIGE_STIMMZETTEL": 610,
 "AZ_JA_STIMMEN": 170
 }
@@ -450,6 +514,7 @@
 {
 "GEMEINDE": "Dänikon",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   34.57",
 "AZ_GÜLTIGE_STIMMZETTEL": 356,
 "AZ_JA_STIMMEN": 109
 }
@@ -457,6 +522,7 @@
 {
 "GEMEINDE": "Dielsdorf",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   36.02",
 "AZ_GÜLTIGE_STIMMZETTEL": 952,
 "AZ_JA_STIMMEN": 256
 }
@@ -464,6 +530,7 @@
 {
 "GEMEINDE": "Hüttikon",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   45.31",
 "AZ_GÜLTIGE_STIMMZETTEL": 167,
 "AZ_JA_STIMMEN": 30
 }
@@ -471,6 +538,7 @@
 {
 "GEMEINDE": "Neerach",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   36.37",
 "AZ_GÜLTIGE_STIMMZETTEL": 602,
 "AZ_JA_STIMMEN": 141
 }
@@ -478,6 +546,7 @@
 {
 "GEMEINDE": "Niederglatt",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   36.06",
 "AZ_GÜLTIGE_STIMMZETTEL": 834,
 "AZ_JA_STIMMEN": 190
 }
@@ -485,6 +554,7 @@
 {
 "GEMEINDE": "Niederhasli",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   31.31",
 "AZ_GÜLTIGE_STIMMZETTEL": 1352,
 "AZ_JA_STIMMEN": 426
 }
@@ -492,6 +562,7 @@
 {
 "GEMEINDE": "Niederweningen",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   36.42",
 "AZ_GÜLTIGE_STIMMZETTEL": 484,
 "AZ_JA_STIMMEN": 140
 }
@@ -499,6 +570,7 @@
 {
 "GEMEINDE": "Oberglatt",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   31.62",
 "AZ_GÜLTIGE_STIMMZETTEL": 871,
 "AZ_JA_STIMMEN": 247
 }
@@ -506,6 +578,7 @@
 {
 "GEMEINDE": "Oberweningen",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   39.17",
 "AZ_GÜLTIGE_STIMMZETTEL": 324,
 "AZ_JA_STIMMEN": 116
 }
@@ -513,6 +586,7 @@
 {
 "GEMEINDE": "Otelfingen",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   39.08",
 "AZ_GÜLTIGE_STIMMZETTEL": 456,
 "AZ_JA_STIMMEN": 136
 }
@@ -520,6 +594,7 @@
 {
 "GEMEINDE": "Regensberg",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   38.75",
 "AZ_GÜLTIGE_STIMMZETTEL": 136,
 "AZ_JA_STIMMEN": 38
 }
@@ -527,6 +602,7 @@
 {
 "GEMEINDE": "Regensdorf",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   35.15",
 "AZ_GÜLTIGE_STIMMZETTEL": 2775,
 "AZ_JA_STIMMEN": 774
 }
@@ -534,6 +610,7 @@
 {
 "GEMEINDE": "Rümlang",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   36.23",
 "AZ_GÜLTIGE_STIMMZETTEL": 1222,
 "AZ_JA_STIMMEN": 376
 }
@@ -541,6 +618,7 @@
 {
 "GEMEINDE": "Schleinikon",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   46.77",
 "AZ_GÜLTIGE_STIMMZETTEL": 207,
 "AZ_JA_STIMMEN": 72
 }
@@ -548,6 +626,7 @@
 {
 "GEMEINDE": "Schöfflisdorf",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   43.10",
 "AZ_GÜLTIGE_STIMMZETTEL": 320,
 "AZ_JA_STIMMEN": 69
 }
@@ -555,6 +634,7 @@
 {
 "GEMEINDE": "Stadel",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   37.90",
 "AZ_GÜLTIGE_STIMMZETTEL": 444,
 "AZ_JA_STIMMEN": 81
 }
@@ -562,6 +642,7 @@
 {
 "GEMEINDE": "Steinmaur",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   39.63",
 "AZ_GÜLTIGE_STIMMZETTEL": 730,
 "AZ_JA_STIMMEN": 216
 }
@@ -569,6 +650,7 @@
 {
 "GEMEINDE": "Weiach",
 "BEZIRK": "Dielsdorf",
+"STIMMBETEILIGUNG": "   41.65",
 "AZ_GÜLTIGE_STIMMZETTEL": 273,
 "AZ_JA_STIMMEN": 73
 }
@@ -576,6 +658,7 @@
 {
 "GEMEINDE": "Aesch",
 "BEZIRK": "Dietikon",
+"STIMMBETEILIGUNG": "   51.94",
 "AZ_GÜLTIGE_STIMMZETTEL": 381,
 "AZ_JA_STIMMEN": 86
 }
@@ -583,6 +666,7 @@
 {
 "GEMEINDE": "Birmensdorf",
 "BEZIRK": "Dietikon",
+"STIMMBETEILIGUNG": "   37.37",
 "AZ_GÜLTIGE_STIMMZETTEL": 1350,
 "AZ_JA_STIMMEN": 367
 }
@@ -590,6 +674,7 @@
 {
 "GEMEINDE": "Dietikon",
 "BEZIRK": "Dietikon",
+"STIMMBETEILIGUNG": "   35.13",
 "AZ_GÜLTIGE_STIMMZETTEL": 3850,
 "AZ_JA_STIMMEN": 1097
 }
@@ -597,6 +682,7 @@
 {
 "GEMEINDE": "Geroldswil",
 "BEZIRK": "Dietikon",
+"STIMMBETEILIGUNG": "   33.43",
 "AZ_GÜLTIGE_STIMMZETTEL": 1054,
 "AZ_JA_STIMMEN": 394
 }
@@ -604,6 +690,7 @@
 {
 "GEMEINDE": "Oberengstringen",
 "BEZIRK": "Dietikon",
+"STIMMBETEILIGUNG": "   36.94",
 "AZ_GÜLTIGE_STIMMZETTEL": 1411,
 "AZ_JA_STIMMEN": 417
 }
@@ -611,6 +698,7 @@
 {
 "GEMEINDE": "Oetwil a.d.L",
 "BEZIRK": "Dietikon",
+"STIMMBETEILIGUNG": "   38.64",
 "AZ_GÜLTIGE_STIMMZETTEL": 580,
 "AZ_JA_STIMMEN": 170
 }
@@ -618,6 +706,7 @@
 {
 "GEMEINDE": "Schlieren",
 "BEZIRK": "Dietikon",
+"STIMMBETEILIGUNG": "   34.32",
 "AZ_GÜLTIGE_STIMMZETTEL": 2301,
 "AZ_JA_STIMMEN": 676
 }
@@ -625,6 +714,7 @@
 {
 "GEMEINDE": "Uitikon",
 "BEZIRK": "Dietikon",
+"STIMMBETEILIGUNG": "   48.49",
 "AZ_GÜLTIGE_STIMMZETTEL": 1210,
 "AZ_JA_STIMMEN": 281
 }
@@ -632,6 +722,7 @@
 {
 "GEMEINDE": "Unterengstringen",
 "BEZIRK": "Dietikon",
+"STIMMBETEILIGUNG": "   39.46",
 "AZ_GÜLTIGE_STIMMZETTEL": 748,
 "AZ_JA_STIMMEN": 182
 }
@@ -639,6 +730,7 @@
 {
 "GEMEINDE": "Urdorf",
 "BEZIRK": "Dietikon",
+"STIMMBETEILIGUNG": "   37.33",
 "AZ_GÜLTIGE_STIMMZETTEL": 2244,
 "AZ_JA_STIMMEN": 652
 }
@@ -646,6 +738,7 @@
 {
 "GEMEINDE": "Weiningen",
 "BEZIRK": "Dietikon",
+"STIMMBETEILIGUNG": "   35.47",
 "AZ_GÜLTIGE_STIMMZETTEL": 813,
 "AZ_JA_STIMMEN": 228
 }
@@ -653,6 +746,7 @@
 {
 "GEMEINDE": "Bäretswil",
 "BEZIRK": "Hinwil",
+"STIMMBETEILIGUNG": "   39.70",
 "AZ_GÜLTIGE_STIMMZETTEL": 1104,
 "AZ_JA_STIMMEN": 243
 }
@@ -660,6 +754,7 @@
 {
 "GEMEINDE": "Bubikon",
 "BEZIRK": "Hinwil",
+"STIMMBETEILIGUNG": "   40.03",
 "AZ_GÜLTIGE_STIMMZETTEL": 1428,
 "AZ_JA_STIMMEN": 398
 }
@@ -667,6 +762,7 @@
 {
 "GEMEINDE": "Dürnten",
 "BEZIRK": "Hinwil",
+"STIMMBETEILIGUNG": "   38.88",
 "AZ_GÜLTIGE_STIMMZETTEL": 1511,
 "AZ_JA_STIMMEN": 415
 }
@@ -674,6 +770,7 @@
 {
 "GEMEINDE": "Fischenthal",
 "BEZIRK": "Hinwil",
+"STIMMBETEILIGUNG": "   35.71",
 "AZ_GÜLTIGE_STIMMZETTEL": 457,
 "AZ_JA_STIMMEN": 125
 }
@@ -681,6 +778,7 @@
 {
 "GEMEINDE": "Gossau",
 "BEZIRK": "Hinwil",
+"STIMMBETEILIGUNG": "   39.11",
 "AZ_GÜLTIGE_STIMMZETTEL": 2182,
 "AZ_JA_STIMMEN": 596
 }
@@ -688,6 +786,7 @@
 {
 "GEMEINDE": "Grüningen",
 "BEZIRK": "Hinwil",
+"STIMMBETEILIGUNG": "   41.71",
 "AZ_GÜLTIGE_STIMMZETTEL": 764,
 "AZ_JA_STIMMEN": 208
 }
@@ -695,6 +794,7 @@
 {
 "GEMEINDE": "Hinwil",
 "BEZIRK": "Hinwil",
+"STIMMBETEILIGUNG": "   37.52",
 "AZ_GÜLTIGE_STIMMZETTEL": 2300,
 "AZ_JA_STIMMEN": 692
 }
@@ -702,6 +802,7 @@
 {
 "GEMEINDE": "Rüti",
 "BEZIRK": "Hinwil",
+"STIMMBETEILIGUNG": "   39.04",
 "AZ_GÜLTIGE_STIMMZETTEL": 2596,
 "AZ_JA_STIMMEN": 684
 }
@@ -709,6 +810,7 @@
 {
 "GEMEINDE": "Seegräben",
 "BEZIRK": "Hinwil",
+"STIMMBETEILIGUNG": "   47.46",
 "AZ_GÜLTIGE_STIMMZETTEL": 362,
 "AZ_JA_STIMMEN": 87
 }
@@ -716,6 +818,7 @@
 {
 "GEMEINDE": "Wald",
 "BEZIRK": "Hinwil",
+"STIMMBETEILIGUNG": "   42.29",
 "AZ_GÜLTIGE_STIMMZETTEL": 2035,
 "AZ_JA_STIMMEN": 576
 }
@@ -723,6 +826,7 @@
 {
 "GEMEINDE": "Wetzikon",
 "BEZIRK": "Hinwil",
+"STIMMBETEILIGUNG": "   38.04",
 "AZ_GÜLTIGE_STIMMZETTEL": 4116,
 "AZ_JA_STIMMEN": 1208
 }
@@ -730,6 +834,7 @@
 {
 "GEMEINDE": "Adliswil",
 "BEZIRK": "Horgen",
+"STIMMBETEILIGUNG": "   39.15",
 "AZ_GÜLTIGE_STIMMZETTEL": 3853,
 "AZ_JA_STIMMEN": 1220
 }
@@ -737,6 +842,7 @@
 {
 "GEMEINDE": "Hirzel",
 "BEZIRK": "Horgen",
+"STIMMBETEILIGUNG": "   42.07",
 "AZ_GÜLTIGE_STIMMZETTEL": 568,
 "AZ_JA_STIMMEN": 155
 }
@@ -744,6 +850,7 @@
 {
 "GEMEINDE": "Horgen",
 "BEZIRK": "Horgen",
+"STIMMBETEILIGUNG": "   39.92",
 "AZ_GÜLTIGE_STIMMZETTEL": 4093,
 "AZ_JA_STIMMEN": 1232
 }
@@ -751,6 +858,7 @@
 {
 "GEMEINDE": "Hütten",
 "BEZIRK": "Horgen",
+"STIMMBETEILIGUNG": "   37.25",
 "AZ_GÜLTIGE_STIMMZETTEL": 220,
 "AZ_JA_STIMMEN": 56
 }
@@ -758,6 +866,7 @@
 {
 "GEMEINDE": "Kilchberg",
 "BEZIRK": "Horgen",
+"STIMMBETEILIGUNG": "   44.46",
 "AZ_GÜLTIGE_STIMMZETTEL": 2218,
 "AZ_JA_STIMMEN": 577
 }
@@ -765,6 +874,7 @@
 {
 "GEMEINDE": "Langnau a.A.",
 "BEZIRK": "Horgen",
+"STIMMBETEILIGUNG": "   50.17",
 "AZ_GÜLTIGE_STIMMZETTEL": 2159,
 "AZ_JA_STIMMEN": 667
 }
@@ -772,6 +882,7 @@
 {
 "GEMEINDE": "Oberrieden",
 "BEZIRK": "Horgen",
+"STIMMBETEILIGUNG": "   46.05",
 "AZ_GÜLTIGE_STIMMZETTEL": 1503,
 "AZ_JA_STIMMEN": 400
 }
@@ -779,6 +890,7 @@
 {
 "GEMEINDE": "Richterswil",
 "BEZIRK": "Horgen",
+"STIMMBETEILIGUNG": "   38.15",
 "AZ_GÜLTIGE_STIMMZETTEL": 2532,
 "AZ_JA_STIMMEN": 809
 }
@@ -786,6 +898,7 @@
 {
 "GEMEINDE": "Rüschlikon",
 "BEZIRK": "Horgen",
+"STIMMBETEILIGUNG": "   44.39",
 "AZ_GÜLTIGE_STIMMZETTEL": 1431,
 "AZ_JA_STIMMEN": 357
 }
@@ -793,6 +906,7 @@
 {
 "GEMEINDE": "Schönenberg",
 "BEZIRK": "Horgen",
+"STIMMBETEILIGUNG": "   41.37",
 "AZ_GÜLTIGE_STIMMZETTEL": 521,
 "AZ_JA_STIMMEN": 138
 }
@@ -800,6 +914,7 @@
 {
 "GEMEINDE": "Thalwil",
 "BEZIRK": "Horgen",
+"STIMMBETEILIGUNG": "   40.69",
 "AZ_GÜLTIGE_STIMMZETTEL": 4259,
 "AZ_JA_STIMMEN": 1400
 }
@@ -807,6 +922,7 @@
 {
 "GEMEINDE": "Wädenswil",
 "BEZIRK": "Horgen",
+"STIMMBETEILIGUNG": "   40.51",
 "AZ_GÜLTIGE_STIMMZETTEL": 4929,
 "AZ_JA_STIMMEN": 1319
 }
@@ -814,6 +930,7 @@
 {
 "GEMEINDE": "Erlenbach",
 "BEZIRK": "Meilen",
+"STIMMBETEILIGUNG": "   43.73",
 "AZ_GÜLTIGE_STIMMZETTEL": 1330,
 "AZ_JA_STIMMEN": 372
 }
@@ -821,6 +938,7 @@
 {
 "GEMEINDE": "Herrliberg",
 "BEZIRK": "Meilen",
+"STIMMBETEILIGUNG": "   45.86",
 "AZ_GÜLTIGE_STIMMZETTEL": 1714,
 "AZ_JA_STIMMEN": 380
 }
@@ -828,6 +946,7 @@
 {
 "GEMEINDE": "Hombrechtikon",
 "BEZIRK": "Meilen",
+"STIMMBETEILIGUNG": "   38.28",
 "AZ_GÜLTIGE_STIMMZETTEL": 1760,
 "AZ_JA_STIMMEN": 488
 }
@@ -835,6 +954,7 @@
 {
 "GEMEINDE": "Küsnacht",
 "BEZIRK": "Meilen",
+"STIMMBETEILIGUNG": "   47.08",
 "AZ_GÜLTIGE_STIMMZETTEL": 4100,
 "AZ_JA_STIMMEN": 1012
 }
@@ -842,6 +962,7 @@
 {
 "GEMEINDE": "Männedorf",
 "BEZIRK": "Meilen",
+"STIMMBETEILIGUNG": "   44.91",
 "AZ_GÜLTIGE_STIMMZETTEL": 2453,
 "AZ_JA_STIMMEN": 786
 }
@@ -849,6 +970,7 @@
 {
 "GEMEINDE": "Meilen",
 "BEZIRK": "Meilen",
+"STIMMBETEILIGUNG": "   44.15",
 "AZ_GÜLTIGE_STIMMZETTEL": 3412,
 "AZ_JA_STIMMEN": 935
 }
@@ -856,6 +978,7 @@
 {
 "GEMEINDE": "Oetwil a.S.",
 "BEZIRK": "Meilen",
+"STIMMBETEILIGUNG": "   31.19",
 "AZ_GÜLTIGE_STIMMZETTEL": 709,
 "AZ_JA_STIMMEN": 201
 }
@@ -863,6 +986,7 @@
 {
 "GEMEINDE": "Stäfa",
 "BEZIRK": "Meilen",
+"STIMMBETEILIGUNG": "   42.16",
 "AZ_GÜLTIGE_STIMMZETTEL": 3250,
 "AZ_JA_STIMMEN": 973
 }
@@ -870,6 +994,7 @@
 {
 "GEMEINDE": "Uetikon a.S.",
 "BEZIRK": "Meilen",
+"STIMMBETEILIGUNG": "   41.31",
 "AZ_GÜLTIGE_STIMMZETTEL": 1208,
 "AZ_JA_STIMMEN": 341
 }
@@ -877,6 +1002,7 @@
 {
 "GEMEINDE": "Zollikon",
 "BEZIRK": "Meilen",
+"STIMMBETEILIGUNG": "   45.21",
 "AZ_GÜLTIGE_STIMMZETTEL": 3731,
 "AZ_JA_STIMMEN": 980
 }
@@ -884,6 +1010,7 @@
 {
 "GEMEINDE": "Zumikon",
 "BEZIRK": "Meilen",
+"STIMMBETEILIGUNG": "   49.71",
 "AZ_GÜLTIGE_STIMMZETTEL": 1606,
 "AZ_JA_STIMMEN": 406
 }
@@ -891,6 +1018,7 @@
 {
 "GEMEINDE": "Bauma",
 "BEZIRK": "Pfäffikon",
+"STIMMBETEILIGUNG": "   39.44",
 "AZ_GÜLTIGE_STIMMZETTEL": 1160,
 "AZ_JA_STIMMEN": 271
 }
@@ -898,6 +1026,7 @@
 {
 "GEMEINDE": "Fehraltorf",
 "BEZIRK": "Pfäffikon",
+"STIMMBETEILIGUNG": "   37.61",
 "AZ_GÜLTIGE_STIMMZETTEL": 1087,
 "AZ_JA_STIMMEN": 341
 }
@@ -905,6 +1034,7 @@
 {
 "GEMEINDE": "Hittnau",
 "BEZIRK": "Pfäffikon",
+"STIMMBETEILIGUNG": "   33.65",
 "AZ_GÜLTIGE_STIMMZETTEL": 634,
 "AZ_JA_STIMMEN": 171
 }
@@ -912,6 +1042,7 @@
 {
 "GEMEINDE": "Illnau-Effretikon",
 "BEZIRK": "Pfäffikon",
+"STIMMBETEILIGUNG": "   40.78",
 "AZ_GÜLTIGE_STIMMZETTEL": 3933,
 "AZ_JA_STIMMEN": 1202
 }
@@ -919,6 +1050,7 @@
 {
 "GEMEINDE": "Lindau",
 "BEZIRK": "Pfäffikon",
+"STIMMBETEILIGUNG": "   43.93",
 "AZ_GÜLTIGE_STIMMZETTEL": 1043,
 "AZ_JA_STIMMEN": 329
 }
@@ -926,6 +1058,7 @@
 {
 "GEMEINDE": "Pfäffikon",
 "BEZIRK": "Pfäffikon",
+"STIMMBETEILIGUNG": "   38.40",
 "AZ_GÜLTIGE_STIMMZETTEL": 2202,
 "AZ_JA_STIMMEN": 636
 }
@@ -933,6 +1066,7 @@
 {
 "GEMEINDE": "Russikon",
 "BEZIRK": "Pfäffikon",
+"STIMMBETEILIGUNG": "   40.61",
 "AZ_GÜLTIGE_STIMMZETTEL": 1037,
 "AZ_JA_STIMMEN": 306
 }
@@ -940,6 +1074,7 @@
 {
 "GEMEINDE": "Weisslingen",
 "BEZIRK": "Pfäffikon",
+"STIMMBETEILIGUNG": "   39.55",
 "AZ_GÜLTIGE_STIMMZETTEL": 775,
 "AZ_JA_STIMMEN": 208
 }
@@ -947,6 +1082,7 @@
 {
 "GEMEINDE": "Wila",
 "BEZIRK": "Pfäffikon",
+"STIMMBETEILIGUNG": "   44.43",
 "AZ_GÜLTIGE_STIMMZETTEL": 520,
 "AZ_JA_STIMMEN": 157
 }
@@ -954,6 +1090,7 @@
 {
 "GEMEINDE": "Wildberg",
 "BEZIRK": "Pfäffikon",
+"STIMMBETEILIGUNG": "   51.20",
 "AZ_GÜLTIGE_STIMMZETTEL": 328,
 "AZ_JA_STIMMEN": 101
 }
@@ -961,6 +1098,7 @@
 {
 "GEMEINDE": "Dübendorf",
 "BEZIRK": "Uster",
+"STIMMBETEILIGUNG": "   35.26",
 "AZ_GÜLTIGE_STIMMZETTEL": 4835,
 "AZ_JA_STIMMEN": 1524
 }
@@ -968,6 +1106,7 @@
 {
 "GEMEINDE": "Egg",
 "BEZIRK": "Uster",
+"STIMMBETEILIGUNG": "   39.28",
 "AZ_GÜLTIGE_STIMMZETTEL": 1859,
 "AZ_JA_STIMMEN": 508
 }
@@ -975,6 +1114,7 @@
 {
 "GEMEINDE": "Fällanden",
 "BEZIRK": "Uster",
+"STIMMBETEILIGUNG": "   35.30",
 "AZ_GÜLTIGE_STIMMZETTEL": 1557,
 "AZ_JA_STIMMEN": 579
 }
@@ -982,6 +1122,7 @@
 {
 "GEMEINDE": "Greifensee",
 "BEZIRK": "Uster",
+"STIMMBETEILIGUNG": "   40.24",
 "AZ_GÜLTIGE_STIMMZETTEL": 1312,
 "AZ_JA_STIMMEN": 451
 }
@@ -989,6 +1130,7 @@
 {
 "GEMEINDE": "Maur",
 "BEZIRK": "Uster",
+"STIMMBETEILIGUNG": "   41.61",
 "AZ_GÜLTIGE_STIMMZETTEL": 2361,
 "AZ_JA_STIMMEN": 715
 }
@@ -996,6 +1138,7 @@
 {
 "GEMEINDE": "Mönchaltorf",
 "BEZIRK": "Uster",
+"STIMMBETEILIGUNG": "   43.54",
 "AZ_GÜLTIGE_STIMMZETTEL": 984,
 "AZ_JA_STIMMEN": 306
 }
@@ -1003,6 +1146,7 @@
 {
 "GEMEINDE": "Schwerzenbach",
 "BEZIRK": "Uster",
+"STIMMBETEILIGUNG": "   34.26",
 "AZ_GÜLTIGE_STIMMZETTEL": 875,
 "AZ_JA_STIMMEN": 301
 }
@@ -1010,6 +1154,7 @@
 {
 "GEMEINDE": "Uster",
 "BEZIRK": "Uster",
+"STIMMBETEILIGUNG": "   40.50",
 "AZ_GÜLTIGE_STIMMZETTEL": 6884,
 "AZ_JA_STIMMEN": 2132
 }
@@ -1017,6 +1162,7 @@
 {
 "GEMEINDE": "Volketswil",
 "BEZIRK": "Uster",
+"STIMMBETEILIGUNG": "   31.36",
 "AZ_GÜLTIGE_STIMMZETTEL": 2642,
 "AZ_JA_STIMMEN": 779
 }
@@ -1024,6 +1170,7 @@
 {
 "GEMEINDE": "Wangen-Brüttisellen",
 "BEZIRK": "Uster",
+"STIMMBETEILIGUNG": "   33.30",
 "AZ_GÜLTIGE_STIMMZETTEL": 1061,
 "AZ_JA_STIMMEN": 271
 }
@@ -1031,6 +1178,7 @@
 {
 "GEMEINDE": "Altikon",
 "BEZIRK": "Winterthur",
+"STIMMBETEILIGUNG": "   49.33",
 "AZ_GÜLTIGE_STIMMZETTEL": 215,
 "AZ_JA_STIMMEN": 47
 }
@@ -1038,6 +1186,7 @@
 {
 "GEMEINDE": "Brütten",
 "BEZIRK": "Winterthur",
+"STIMMBETEILIGUNG": "   46.08",
 "AZ_GÜLTIGE_STIMMZETTEL": 601,
 "AZ_JA_STIMMEN": 161
 }
@@ -1045,6 +1194,7 @@
 {
 "GEMEINDE": "Dägerlen",
 "BEZIRK": "Winterthur",
+"STIMMBETEILIGUNG": "   50.78",
 "AZ_GÜLTIGE_STIMMZETTEL": 286,
 "AZ_JA_STIMMEN": 90
 }
@@ -1052,6 +1202,7 @@
 {
 "GEMEINDE": "Dättlikon",
 "BEZIRK": "Winterthur",
+"STIMMBETEILIGUNG": "   57.29",
 "AZ_GÜLTIGE_STIMMZETTEL": 219,
 "AZ_JA_STIMMEN": 71
 }
@@ -1059,6 +1210,7 @@
 {
 "GEMEINDE": "Dinhard",
 "BEZIRK": "Winterthur",
+"STIMMBETEILIGUNG": "   54.67",
 "AZ_GÜLTIGE_STIMMZETTEL": 527,
 "AZ_JA_STIMMEN": 149
 }
@@ -1066,6 +1218,7 @@
 {
 "GEMEINDE": "Elgg",
 "BEZIRK": "Winterthur",
+"STIMMBETEILIGUNG": "   45.14",
 "AZ_GÜLTIGE_STIMMZETTEL": 1084,
 "AZ_JA_STIMMEN": 299
 }
@@ -1073,6 +1226,7 @@
 {
 "GEMEINDE": "Ellikon a.d.Th.",
 "BEZIRK": "Winterthur",
+"STIMMBETEILIGUNG": "   43.92",
 "AZ_GÜLTIGE_STIMMZETTEL": 221,
 "AZ_JA_STIMMEN": 42
 }
@@ -1080,6 +1234,7 @@
 {
 "GEMEINDE": "Elsau",
 "BEZIRK": "Winterthur",
+"STIMMBETEILIGUNG": "   44.92",
 "AZ_GÜLTIGE_STIMMZETTEL": 904,
 "AZ_JA_STIMMEN": 284
 }
@@ -1087,6 +1242,7 @@
 {
 "GEMEINDE": "Hagenbuch",
 "BEZIRK": "Winterthur",
+"STIMMBETEILIGUNG": "   40.14",
 "AZ_GÜLTIGE_STIMMZETTEL": 288,
 "AZ_JA_STIMMEN": 69
 }
@@ -1094,6 +1250,7 @@
 {
 "GEMEINDE": "Hettlingen",
 "BEZIRK": "Winterthur",
+"STIMMBETEILIGUNG": "   50.16",
 "AZ_GÜLTIGE_STIMMZETTEL": 751,
 "AZ_JA_STIMMEN": 194
 }
@@ -1101,6 +1258,7 @@
 {
 "GEMEINDE": "Hofstetten",
 "BEZIRK": "Winterthur",
+"STIMMBETEILIGUNG": "   55.41",
 "AZ_GÜLTIGE_STIMMZETTEL": 166,
 "AZ_JA_STIMMEN": 23
 }
@@ -1108,6 +1266,7 @@
 {
 "GEMEINDE": "Neftenbach",
 "BEZIRK": "Winterthur",
+"STIMMBETEILIGUNG": "   41.41",
 "AZ_GÜLTIGE_STIMMZETTEL": 1197,
 "AZ_JA_STIMMEN": 328
 }
@@ -1115,6 +1274,7 @@
 {
 "GEMEINDE": "Pfungen",
 "BEZIRK": "Winterthur",
+"STIMMBETEILIGUNG": "   42.24",
 "AZ_GÜLTIGE_STIMMZETTEL": 631,
 "AZ_JA_STIMMEN": 195
 }
@@ -1122,6 +1282,7 @@
 {
 "GEMEINDE": "Rickenbach",
 "BEZIRK": "Winterthur",
+"STIMMBETEILIGUNG": "   45.28",
 "AZ_GÜLTIGE_STIMMZETTEL": 629,
 "AZ_JA_STIMMEN": 152
 }
@@ -1129,6 +1290,7 @@
 {
 "GEMEINDE": "Schlatt",
 "BEZIRK": "Winterthur",
+"STIMMBETEILIGUNG": "   48.49",
 "AZ_GÜLTIGE_STIMMZETTEL": 206,
 "AZ_JA_STIMMEN": 85
 }
@@ -1136,6 +1298,7 @@
 {
 "GEMEINDE": "Seuzach",
 "BEZIRK": "Winterthur",
+"STIMMBETEILIGUNG": "   44.15",
 "AZ_GÜLTIGE_STIMMZETTEL": 1922,
 "AZ_JA_STIMMEN": 490
 }
@@ -1143,6 +1306,7 @@
 {
 "GEMEINDE": "Turbenthal",
 "BEZIRK": "Winterthur",
+"STIMMBETEILIGUNG": "   39.64",
 "AZ_GÜLTIGE_STIMMZETTEL": 959,
 "AZ_JA_STIMMEN": 285
 }
@@ -1150,6 +1314,7 @@
 {
 "GEMEINDE": "Wiesendangen",
 "BEZIRK": "Winterthur",
+"STIMMBETEILIGUNG": "   50.82",
 "AZ_GÜLTIGE_STIMMZETTEL": 1771,
 "AZ_JA_STIMMEN": 438
 }
@@ -1157,6 +1322,7 @@
 {
 "GEMEINDE": "Winterthur",
 "BEZIRK": "Winterthur",
+"STIMMBETEILIGUNG": "   48.26",
 "AZ_GÜLTIGE_STIMMZETTEL": 26578,
 "AZ_JA_STIMMEN": 8542
 }
@@ -1164,6 +1330,7 @@
 {
 "GEMEINDE": "Zell",
 "BEZIRK": "Winterthur",
+"STIMMBETEILIGUNG": "   39.31",
 "AZ_GÜLTIGE_STIMMZETTEL": 1069,
 "AZ_JA_STIMMEN": 296
 }
@@ -1171,6 +1338,7 @@
 {
 "GEMEINDE": "Zürich",
 "BEZIRK": "Zürich",
+"STIMMBETEILIGUNG": "   42.95",
 "AZ_GÜLTIGE_STIMMZETTEL": 89885,
 "AZ_JA_STIMMEN": 36354
 }

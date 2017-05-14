@@ -258,7 +258,7 @@ function showVoteDetails(voteId){
   $("#vote-participation").html(vote.voteParticipation);
   $.getJSON("json/"+voteId+".json", function(data){
     $.each(data, function(key, val){
-      $("#graph").append("<p>"+val.GEMEINDE+": "+val.AZ_JA_STIMMEN/val.AZ_GÜLTIGE_STIMMZETTEL+"%</p>");
+      $("#graph").append("<p>"+val.GEMEINDE+": "+(val.AZ_JA_STIMMEN/val.AZ_GÜLTIGE_STIMMZETTEL*100).toFixed(2)+"%</p>");
     });
   }).fail( function(d, textStatus, error) {
     console.error("getJSON failed, status: " + textStatus + ", error: "+error)

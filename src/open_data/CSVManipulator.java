@@ -30,6 +30,7 @@ public class CSVManipulator {
 				it.add("{");
 				it.add("\"GEMEINDE\": "+lineData[6]+",");
 				it.add("\"BEZIRK\": "+lineData[7]+",");
+				it.add("\"STIMMBETEILIGUNG\": "+lineData[10]+",");
 				it.add("\"AZ_GÜLTIGE_STIMMZETTEL\": "+lineData[11]+",");
 				it.add("\"AZ_JA_STIMMEN\": "+lineData[12]);
 				it.add("}");
