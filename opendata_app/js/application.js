@@ -38,6 +38,8 @@ $(document).ready(function(){
   $("body").on("click", ".breadcrumb", function(event){
     $("svg").remove();
     $("table").remove();
+    $("#single-vote-wrapper").hide();
+    $("#details-wrapper").show();
     $(".preloader-wrapper").show();
     if($(this).is("#overview")){
       returnToOverview();

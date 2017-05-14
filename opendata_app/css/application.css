@@ -36,3 +36,6 @@ mark{
 .label{
   font-weight: bold;
 }
+#single-vote-wrapper .col{
+  padding: 10px 0px;
+}

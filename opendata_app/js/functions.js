@@ -256,9 +256,10 @@ function showVoteDetails(voteId){
   $("#vote-description").html(vote.voteDescription);
   $("#yes-percentage").html(vote.yesPercentage);
   $("#vote-participation").html(vote.voteParticipation);
+  $("#url a").html(vote.urlDescription).attr("href", vote.url);
   $.getJSON("json/"+voteId+".json", function(data){
     $.each(data, function(key, val){
-      $("#graph").append("<p>"+val.GEMEINDE+": "+(val.AZ_JA_STIMMEN/val.AZ_GÜLTIGE_STIMMZETTEL*100).toFixed(2)+"%</p>");
+      $("#graph").append("<p>"+val.GEMEINDE+": "+(val.AZ_JA_STIMMEN/val.AZ_GÜLTIGE_STIMMZETTEL*100).toFixed(2)+"%  "+parseFloat(val.STIMMBETEILIGUNG)+"%</p>");
     });
   }).fail( function(d, textStatus, error) {
     console.error("getJSON failed, status: " + textStatus + ", error: "+error)
