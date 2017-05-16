@@ -1,11 +1,11 @@
-text{
+#details-wrapper text, g.legend{
   cursor: pointer;
 }
 .breadcrumb{
   padding-left: 5px;
 }
 mark{
-  background-color: rgb(255, 255, 230);
+  background-color: rgb(255, 255, 200);
 }
 #content-wrapper{
   position: relative;
@@ -38,4 +38,17 @@ mark{
 }
 #single-vote-wrapper .col{
   padding: 10px 0px;
+}
+#topbarsearch .input-field .prefix {
+    width:0rem !important;
+    }
+.input-field .prefix ~ input, .input-field .prefix ~ textarea, .input-field .prefix ~ label, .input-field .prefix ~ .validate ~ label, .input-field .prefix ~ .autocomplete-content{
+    margin-left: 1rem !important;
+    }
+#search-nav{
+  box-shadow: none;
+}
+.autocomplete-content{
+  background-color: white;
+  position: relative;
 }

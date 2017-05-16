@@ -16,11 +16,23 @@ $(document).ready(function(){
     loadWords();
     $("#vote-count").show();
     displayWordCloud();
+    var words = possibleWordsWithIdsStack[0].map(function(d){ return d.word });
+    var autocompleteData = {};
+    for(var i=0; i<words.length; ++i){
+      autocompleteData[words[i]] = null;
+    }
+    $('input.autocomplete').autocomplete({
+    data: autocompleteData,
+    limit: 10,
+    onAutocomplete: function (e, ui) {
+      searchWord();
+    }
+    });
   }).fail( function(d, textStatus, error) {
     console.error("getJSON failed, status: " + textStatus + ", error: "+error)
   });
 
-  $("body").on("click", "text", function(event){
+  $("#details-wrapper").on("click", "text", function(event){
     $("svg").remove();
     $("table").remove();
     $(".preloader-wrapper").show();
@@ -47,6 +59,7 @@ $(document).ready(function(){
       var word = $(this).html().toLowerCase();
       jumpToBreadcrumb(word);
     }
+    $("#help-button").attr("href", "#wordcloud-help-modal");
   });
 
   $("body").on("click", "tr.vote-row", function(event){
@@ -54,5 +67,22 @@ $(document).ready(function(){
     $(".preloader-wrapper").show();
     var voteId = $(this).find("input.vote-id").val();
     showVoteDetails(voteId);
+    $("#help-button").attr("href", "#scatterplot-help-modal");
+  });
+
+  $("body").on("click", "g.legend", function(event){
+    if($(this).css("opacity")!=0.5){
+      $(this).css("opacity", 0.5);
+      $("circle."+this.id).hide();
+    } else {
+      $(this).css("opacity", 1);
+      $("circle."+this.id).show();
+    }
+  });
+
+  $("body").on("keypress", "#autocomplete-input", function(event){
+    if(event.keyCode == 13){
+      searchWord();
+    }
   });
 });

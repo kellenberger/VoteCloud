@@ -238,7 +238,12 @@ function jumpToBreadcrumb(word){
     possibleWordsWithIdsStack.pop();
     displayedIds.pop();
   }
-  displayWordCloud();
+  currentIds = displayedIds[displayedIds.length-1]
+  if(currentIds.size <= 25){
+    showDetailTable(currentIds);
+  } else {
+    displayWordCloud();
+  }
 }
 
 function showVoteDetails(voteId){
@@ -258,10 +263,21 @@ function showVoteDetails(voteId){
   $("#vote-participation").html(vote.voteParticipation);
   $("#url a").html(vote.urlDescription).attr("href", vote.url);
   $.getJSON("json/"+voteId+".json", function(data){
+    var gemeinden = [];
     $.each(data, function(key, val){
-      $("#graph").append("<p>"+val.GEMEINDE+": "+(val.AZ_JA_STIMMEN/val.AZ_GÜLTIGE_STIMMZETTEL*100).toFixed(2)+"%  "+parseFloat(val.STIMMBETEILIGUNG)+"%</p>");
+      var one = {};
+      one.gemeinde = val.GEMEINDE;
+      one.bezirk = val.BEZIRK
+      one.yesPercentage = (val.AZ_JA_STIMMEN/val.AZ_GÜLTIGE_STIMMZETTEL*100).toFixed(2);
+      one.voteParticipation = parseFloat(val.STIMMBETEILIGUNG);
+      gemeinden.push(one);
     });
+    drawScatterPlot(gemeinden);
   }).fail( function(d, textStatus, error) {
     console.error("getJSON failed, status: " + textStatus + ", error: "+error)
   });
+}
+
+function searchWord(){
+  console.log($("#autocomplete-input").val());
 }
