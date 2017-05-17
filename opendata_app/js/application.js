@@ -16,35 +16,12 @@ $(document).ready(function(){
     loadWords();
     $("#vote-count").show();
     displayWordCloud();
-    var words = possibleWordsWithIdsStack[0].map(function(d){ return d.word });
-    var autocompleteData = {};
-    for(var i=0; i<words.length; ++i){
-      autocompleteData[words[i]] = null;
-    }
-    $('input.autocomplete').autocomplete({
-    data: autocompleteData,
-    limit: 10,
-    onAutocomplete: function (e, ui) {
-      searchWord();
-    }
-    });
   }).fail( function(d, textStatus, error) {
     console.error("getJSON failed, status: " + textStatus + ", error: "+error)
   });
 
   $("#details-wrapper").on("click", "text", function(event){
-    $("svg").remove();
-    $("table").remove();
-    $(".preloader-wrapper").show();
-    var selectedWord = $(this).html();
-    $(".breadcrumb-wrapper").append("<a href=\"#!\" class=\"breadcrumb\">"+selectedWord+"</a>");
-    displayedWords.push(selectedWord.toLowerCase());
-    var currentIds = calculateNewList();
-    if(currentIds.size <= 25){
-      showDetailTable(currentIds);
-    } else {
-      displayWordCloud();
-    }
+    addBreadcrumb($(this).html());
   });
 
   $("body").on("click", ".breadcrumb", function(event){

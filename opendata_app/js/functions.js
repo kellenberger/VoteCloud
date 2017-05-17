@@ -145,6 +145,7 @@ function displayWordCloud(){
     })
     .text(function(d) { return d.text; });
   }
+  initAutocomplete();
 }
 
 function isSameWord(word1, word2){
@@ -189,6 +190,7 @@ Set.prototype.filter = function(f) {
 };
 
 function showDetailTable(ids){
+  $("input#autocomplete-input").prop("disabled", true);
   displayedIds.push(ids);
   $("#vote-count b").html(ids.size);
   var appendString = "<table class=\"bordered highlight\"><thead><tr><th>Datum</th><th>Abstimmungs Langbezeichnung</th><th>Ja Stimmen</th></tr></thead><tbody>";
@@ -278,6 +280,53 @@ function showVoteDetails(voteId){
   });
 }
 
+function addBreadcrumb(selectedWord){
+  $("svg").remove();
+  $("table").remove();
+  $(".preloader-wrapper").show();
+  $(".breadcrumb-wrapper").append("<a href=\"#!\" class=\"breadcrumb\">"+selectedWord.toUpperCase()+"</a>");
+  displayedWords.push(selectedWord.toLowerCase());
+  var currentIds = calculateNewList();
+  if(currentIds.size <= 25){
+    showDetailTable(currentIds);
+  } else {
+    displayWordCloud();
+  }
+}
+
 function searchWord(){
-  console.log($("#autocomplete-input").val());
+  var word = $("#autocomplete-input").val();
+  if(!calculatedWordsHash.hasOwnProperty(word)){
+    var ids = new Set();
+    for(var i=0; i<votesArray.length; ++i){
+      if(votesArray[i].description.toLowerCase().includes(word)){
+        ids.add(votesArray[i].id);
+      }
+    }
+    calculatedWordsHash[word] = ids;
+  }
+  addBreadcrumb(word);
+}
+
+function initAutocomplete(){
+  $("input#autocomplete-input").prop("disabled", false);
+  var words = possibleWordsWithIdsStack[possibleWordsWithIdsStack.length-1].map(function(d){ return d.word });
+  var autocompleteData = {};
+  for(var i=0; i<words.length; ++i){
+    autocompleteData[words[i]] = null;
+  }
+  if($(".autocomplete-content")[0]){
+    $('input.autocomplete').autocomplete({
+      data: autocompleteData,
+      limit: 10
+    });
+  } else {
+    $('input.autocomplete').autocomplete({
+      data: autocompleteData,
+      limit: 10,
+      onAutocomplete: function (e, ui) {
+        searchWord();
+      }
+    });
+  }
 }
