@@ -1,4 +1,4 @@
-#details-wrapper text, g.legend{
+#details-wrapper text, g.legend, tr.vote-row{
   cursor: pointer;
 }
 .breadcrumb{

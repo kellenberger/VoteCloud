@@ -191,6 +191,7 @@ Set.prototype.filter = function(f) {
 
 function showDetailTable(ids){
   $("input#autocomplete-input").prop("disabled", true);
+  $("ul.autocomplete-content").hide();
   displayedIds.push(ids);
   $("#vote-count b").html(ids.size);
   var appendString = "<table class=\"bordered highlight\"><thead><tr><th>Datum</th><th>Abstimmungs Langbezeichnung</th><th>Ja Stimmen</th></tr></thead><tbody>";
@@ -296,6 +297,7 @@ function addBreadcrumb(selectedWord){
 
 function searchWord(){
   var word = $("#autocomplete-input").val();
+  $("#autocomplete-input").val("");
   if(!calculatedWordsHash.hasOwnProperty(word)){
     var ids = new Set();
     for(var i=0; i<votesArray.length; ++i){
@@ -310,6 +312,7 @@ function searchWord(){
 
 function initAutocomplete(){
   $("input#autocomplete-input").prop("disabled", false);
+  $("ul.autocomplete-content").show();
   var words = possibleWordsWithIdsStack[possibleWordsWithIdsStack.length-1].map(function(d){ return d.word });
   var autocompleteData = {};
   for(var i=0; i<words.length; ++i){
