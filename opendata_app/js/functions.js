@@ -116,7 +116,10 @@ function displayWordCloud(){
     return {text: word.word.toUpperCase(), size: size};
   });
 
-  d3.layout.cloud().size([960, 600])
+  var width = $("#details-wrapper").width();
+  var height = 0.625*width;
+
+  d3.layout.cloud().size([width, height])
   .words(words)
   .padding(5)
   .rotate(function() { return ~~(Math.random() * 2) *90; }) // ~~(Math.random() * 2) *90
@@ -128,11 +131,10 @@ function displayWordCloud(){
   function draw(words) {
     $(".preloader-wrapper").hide();
     d3.select("#details-wrapper").append("svg")
-    .attr("viewbox", "0 0 960 600")
-    .attr("width", 960)
-    .attr("height", 600)
+    .attr("width", width)
+    .attr("height", height)
     .append("g")
-    .attr("transform", "translate(480,300)")
+    .attr("transform", "translate("+(width/2)+","+(height/2)+")")
     .selectAll("text")
     .data(words)
     .enter().append("text")
@@ -198,21 +200,12 @@ function showDetailTable(ids){
   for(var i=0; i<votesArray.length; ++i){
     var vote = votesArray[i];
     if(ids.has(vote.id)){
-      var day = vote.date.getDate();
-      if(day<10){
-        day = "0"+day;
-      }
-      var month = vote.date.getMonth()+1;
-      if(month<10){
-        month = "0"+month;
-      }
-      var year = vote.date.getFullYear();
       var color = "red";
       var yesPercentage = vote.yesPercentage;
       if(yesPercentage>50){
         color = "green";
       }
-      appendString += "<tr class=\"vote-row\"><input class=\"vote-id\" type=\"hidden\" value=\""+vote.id+"\"><td>"+day+"."+month+"."+year+"</td><td>"+vote.description+"</td><td class=\""+color+"-text\">"+yesPercentage+"%</td></tr>";
+      appendString += "<tr class=\"vote-row\"><input class=\"vote-id\" type=\"hidden\" value=\""+vote.id+"\"><td>"+vote.dateToString()+"</td><td>"+vote.description+"</td><td class=\""+color+"-text\">"+yesPercentage+"%</td></tr>";
     }
   }
   appendString+="</tbody></table>";
@@ -257,6 +250,7 @@ function showVoteDetails(voteId){
       break;
     }
   }
+  $("#vote-count").hide();
   $(".preloader-wrapper").hide();
   $("#single-vote-wrapper").show();
   $("#description").html(vote.description);
@@ -277,7 +271,7 @@ function showVoteDetails(voteId){
     });
     drawScatterPlot(gemeinden);
   }).fail( function(d, textStatus, error) {
-    console.error("getJSON failed, status: " + textStatus + ", error: "+error)
+    $("#graph").html("Zu dieser Abstimmung sind keine zusätzlichen Informationen vorhanden");
   });
 }
 

@@ -8,9 +8,8 @@ mark{
   background-color: rgb(255, 255, 200);
 }
 #content-wrapper{
-  position: relative;
   width: 100%;
-  padding-top: 62.5%;
+  padding-bottom: calc(62.5% + 20px);
   top: 20px;
 }
 .preloader-wrapper{
@@ -20,12 +19,8 @@ mark{
   left: calc(50% - 32px);
   vertical-align: middle;
 }
-#content-wrapper .wrapper{
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+#content-wrapper .wrapper, #graph{
+  width: 100%;
 }
 .breadcrumb-wrapper {
   white-space: nowrap;
@@ -40,15 +35,19 @@ mark{
   padding: 10px 0px;
 }
 #topbarsearch .input-field .prefix {
-    width:0rem !important;
-    }
+  width:0rem !important;
+}
 .input-field .prefix ~ input, .input-field .prefix ~ textarea, .input-field .prefix ~ label, .input-field .prefix ~ .validate ~ label, .input-field .prefix ~ .autocomplete-content{
-    margin-left: 1rem !important;
-    }
+  margin-left: 1rem !important;
+}
 #search-nav{
   box-shadow: none;
 }
 .autocomplete-content{
   background-color: white;
   position: relative;
+}
+.tooltip{
+  background-color: white;
+  pointer-events: none;
 }

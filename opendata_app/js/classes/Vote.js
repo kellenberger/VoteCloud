@@ -26,3 +26,16 @@ function Vote(object){
   this.url = url;
   this.urlDescription = linkDescription;
 }
+
+Vote.prototype.dateToString = function(){
+  var day = this.date.getDate();
+  if(day<10){
+    day = "0"+day;
+  }
+  var month = this.date.getMonth()+1;
+  if(month<10){
+    month = "0"+month;
+  }
+  var year = this.date.getFullYear();
+  return day+"."+month+"."+year;
+}

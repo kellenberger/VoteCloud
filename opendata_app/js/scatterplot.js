@@ -1,7 +1,7 @@
 function drawScatterPlot(results){
   var margin = {top: 10, right: 20, bottom: 40, left: 40},
-  width = 660 - margin.left - margin.right,
-  height = 660 - margin.top - margin.bottom;
+  width = $("#graph").width() - margin.left - margin.right,
+  height = $("#graph").width() - margin.top - margin.bottom;
 
   /*
   * value accessor - returns the value to encode for a given data object.
@@ -91,7 +91,7 @@ function drawScatterPlot(results){
     tooltip.transition()
     .duration(500)
     .style("opacity", 0);
-    $(this).attr("r", 3.5).removeAttr("stroke");
+    $("circle").attr("r", 3.5).removeAttr("stroke");
   });
 
   // draw legend
