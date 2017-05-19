@@ -28,6 +28,7 @@ $(document).ready(function(){
     $("svg").remove();
     $("table").remove();
     $("#single-vote-wrapper").hide();
+    $("#vote-count").show();
     $("#details-wrapper").show();
     $(".preloader-wrapper").show();
     if($(this).is("#overview")){
@@ -57,9 +58,9 @@ $(document).ready(function(){
     }
   });
 
-  $("body").on("keypress", "#autocomplete-input", function(event){
+  $("body").on("keypress", ".autocomplete-input", function(event){
     if(event.keyCode == 13){
-      searchWord();
+      searchWord($(this).val());
     }
   });
 });

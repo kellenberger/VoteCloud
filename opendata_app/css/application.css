@@ -19,7 +19,7 @@ mark{
   left: calc(50% - 32px);
   vertical-align: middle;
 }
-#content-wrapper .wrapper, #graph{
+#content-wrapper .wrapper{
   width: 100%;
 }
 .breadcrumb-wrapper {
@@ -34,13 +34,13 @@ mark{
 #single-vote-wrapper .col{
   padding: 10px 0px;
 }
-#topbarsearch .input-field .prefix {
+.topbarsearch .input-field .prefix {
   width:0rem !important;
 }
 .input-field .prefix ~ input, .input-field .prefix ~ textarea, .input-field .prefix ~ label, .input-field .prefix ~ .validate ~ label, .input-field .prefix ~ .autocomplete-content{
   margin-left: 1rem !important;
 }
-#search-nav{
+.search-nav{
   box-shadow: none;
 }
 .autocomplete-content{
@@ -50,4 +50,10 @@ mark{
 .tooltip{
   background-color: white;
   pointer-events: none;
+}
+ul.autocomplete-content{
+  position: absolute;
+}
+li{
+  max-height: 55px;
 }

@@ -111,13 +111,24 @@ function displayWordCloud(){
 
   var fill = d3.scale.category20();
 
+  var width = $("#details-wrapper").width();
+  var height;
+
+  var minSize, sizeStep;
+  if(width<750){
+    minSize = 10;
+    sizeStep = 100;
+    height = 1.3*width;
+  } else {
+    minSize = 15;
+    sizeStep = 10;
+    height = 0.625*width;
+  }
+
   var words = trimmedWordList.map(function(word) {
-    var size = 15 + word.ids.size / 10;
+    var size = minSize + word.ids.size / sizeStep;
     return {text: word.word.toUpperCase(), size: size};
   });
-
-  var width = $("#details-wrapper").width();
-  var height = 0.625*width;
 
   d3.layout.cloud().size([width, height])
   .words(words)
@@ -192,7 +203,7 @@ Set.prototype.filter = function(f) {
 };
 
 function showDetailTable(ids){
-  $("input#autocomplete-input").prop("disabled", true);
+  $("input.autocomplete-input").prop("disabled", true);
   $("ul.autocomplete-content").hide();
   displayedIds.push(ids);
   $("#vote-count b").html(ids.size);
@@ -289,9 +300,8 @@ function addBreadcrumb(selectedWord){
   }
 }
 
-function searchWord(){
-  var word = $("#autocomplete-input").val();
-  $("#autocomplete-input").val("");
+function searchWord(word){
+  $(".autocomplete-input").val("");
   if(!calculatedWordsHash.hasOwnProperty(word)){
     var ids = new Set();
     for(var i=0; i<votesArray.length; ++i){
@@ -305,7 +315,7 @@ function searchWord(){
 }
 
 function initAutocomplete(){
-  $("input#autocomplete-input").prop("disabled", false);
+  $("input.autocomplete-input").prop("disabled", false);
   $("ul.autocomplete-content").show();
   var words = possibleWordsWithIdsStack[possibleWordsWithIdsStack.length-1].map(function(d){ return d.word });
   var autocompleteData = {};
@@ -321,8 +331,8 @@ function initAutocomplete(){
     $('input.autocomplete').autocomplete({
       data: autocompleteData,
       limit: 10,
-      onAutocomplete: function (e, ui) {
-        searchWord();
+      onAutocomplete: function (val) {
+        searchWord(val);
       }
     });
   }
