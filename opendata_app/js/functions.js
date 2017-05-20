@@ -149,6 +149,7 @@ function displayWordCloud(){
     .selectAll("text")
     .data(words)
     .enter().append("text")
+    .style("display", "none")
     .style("font-size", function(d) { return d.size + "px"; })
     .style("font-family", "Impact")
     .style("fill", function(d, i) { return fill(i); })
@@ -157,6 +158,15 @@ function displayWordCloud(){
       return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
     })
     .text(function(d) { return d.text; });
+    $.each($("text"), function(index, value) {
+    // Use IIFE to multiply Wait x Index
+    (function(index, value) {
+      var wait = index * 5 + 5;
+      setTimeout(function() {
+        $(value).fadeIn("slow");
+      }, wait);
+    })(index, value);
+  });
   }
   initAutocomplete();
 }
