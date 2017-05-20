@@ -25,7 +25,6 @@ $(document).ready(function(){
   });
 
   $("body").on("click", ".breadcrumb", function(event){
-    $("input#legend-display").prop("checked", true);
     $("svg").remove();
     $("table").remove();
     $("#single-vote-wrapper").hide();
@@ -67,7 +66,6 @@ $(document).ready(function(){
   });
 
   $("body").on("change", "input#legend-display", function(event){
-    console.log("In");
     $("g.legend").toggle(this.checked);
   });
 });

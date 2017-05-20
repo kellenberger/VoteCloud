@@ -280,6 +280,7 @@ function showVoteDetails(voteId){
   $("#yes-percentage").html(vote.yesPercentage);
   $("#vote-participation").html(vote.voteParticipation);
   $("#url a").html(vote.urlDescription).attr("href", vote.url);
+  $("input#legend-display").prop("checked", true);
   $.getJSON("json/"+voteId+".json", function(data){
     var gemeinden = [];
     $.each(data, function(key, val){
@@ -292,6 +293,7 @@ function showVoteDetails(voteId){
     });
     drawScatterPlot(gemeinden);
   }).fail( function(d, textStatus, error) {
+    $("#legend-checkbox").hide();
     $("#graph").html("Zu dieser Abstimmung sind keine zusätzlichen Informationen vorhanden");
   });
 }

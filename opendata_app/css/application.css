@@ -57,3 +57,6 @@ ul.autocomplete-content{
 li{
   max-height: 55px;
 }
+.breadcrumb-wrapper{
+  padding-right: 10px;
+}

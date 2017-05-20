@@ -1,4 +1,6 @@
 function drawScatterPlot(results){
+  $("#legend-checkbox").show();
+  $("#graph").html("");
   var margin = {top: 10, right: 20, bottom: 40, left: 40},
   width = $("#graph").width() - margin.left - margin.right,
   height = $("#graph").width() - margin.top - margin.bottom;
