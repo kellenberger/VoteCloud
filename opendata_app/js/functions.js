@@ -140,7 +140,6 @@ function displayWordCloud(){
   .start();
 
   function draw(words) {
-    $(".preloader-wrapper").hide();
     d3.select("#details-wrapper").append("svg")
     .attr("width", width)
     .attr("height", height)
@@ -158,6 +157,7 @@ function displayWordCloud(){
       return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
     })
     .text(function(d) { return d.text; });
+    $(".preloader-wrapper").hide();
     $.each($("text"), function(index, value) {
     // Use IIFE to multiply Wait x Index
     (function(index, value) {
