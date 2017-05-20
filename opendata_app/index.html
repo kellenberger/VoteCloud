@@ -32,7 +32,7 @@
                 <div class="row topbarsearch">
                   <div class="input-field col s6 s12">
                     <i class="blue-grey-text text-darken-1 material-icons prefix">search</i>
-                    <input type="text" placeholder="search" class="autocomplete-input autocomplete blue-grey-text text-darken-1" >
+                    <input type="text" placeholder="Suche" class="autocomplete-input autocomplete blue-grey-text text-darken-1" >
                   </div>
                 </div>
               </div>
@@ -50,7 +50,7 @@
                 <div class="row topbarsearch">
                   <div class="input-field col s6 s12">
                     <i class="blue-grey-text text-darken-1 material-icons prefix">search</i>
-                    <input type="text" placeholder="search" class="autocomplete-input autocomplete blue-grey-text text-darken-1" >
+                    <input type="text" placeholder="Suche" class="autocomplete-input autocomplete blue-grey-text text-darken-1" >
                   </div>
                 </div>
               </div>
@@ -98,14 +98,19 @@
             <div id="yes-percentage" class="col m3 s6"></div>
             <div class="col m3 s6 label">Stimmbeteiligung:</div>
             <div id="vote-participation" class="col m3 s6"></div>
+            <div class="col m3 s6 label">Abstimmungsdatum:</div>
+            <div id="vote-date" class="col m3 s6"></div>
             <div class="col m3 s6 label">Link:</div>
             <div id="url" class="col m3 s6"><a target="_blank" href="#!"></a></div>
           </div>
-          <div id="legend-checkbox" class="col s12">
-            <input type="checkbox" id="legend-display" checked="checked" />
-            <label for="legend-display">Legende anzeigen</label>
+          <div id="legend-checkbox" class="switch">
+            <label>
+              <input type="checkbox" id="legend-display" checked="checked">
+              <span class="lever"></span>
+              Legende anzeigen
+            </label>
           </div>
-          <div id="graph" class="col l6 s12"></div>
+          <div id="graph" class="col l6 m9 s12"></div>
         </div>
       </div>
       <div class="fixed-action-btn">

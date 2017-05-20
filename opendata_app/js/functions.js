@@ -217,7 +217,7 @@ function showDetailTable(ids){
   $("ul.autocomplete-content").hide();
   displayedIds.push(ids);
   $("#vote-count b").html(ids.size);
-  var appendString = "<table class=\"bordered highlight\"><thead><tr><th>Datum</th><th>Abstimmungs Langbezeichnung</th><th>Ja Stimmen</th></tr></thead><tbody>";
+  var appendString = "<table class=\"bordered highlight\"><thead><tr><th>Datum</th><th>Abstimmungsbezeichnung</th><th>Ja-%</th></tr></thead><tbody>";
   for(var i=0; i<votesArray.length; ++i){
     var vote = votesArray[i];
     if(ids.has(vote.id)){
@@ -279,6 +279,7 @@ function showVoteDetails(voteId){
   $("#vote-description").html(vote.voteDescription);
   $("#yes-percentage").html(vote.yesPercentage);
   $("#vote-participation").html(vote.voteParticipation);
+  $("#vote-date").html(vote.dateToString());
   $("#url a").html(vote.urlDescription).attr("href", vote.url);
   $("input#legend-display").prop("checked", true);
   $.getJSON("json/"+voteId+".json", function(data){

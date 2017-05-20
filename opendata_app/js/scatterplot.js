@@ -82,10 +82,10 @@ function drawScatterPlot(results){
     tooltip.transition()
     .duration(200)
     .style("opacity", .9);
-    tooltip.html(d.gemeinde + "<br/> (" + xValue(d)
-    + "%, " + yValue(d) + "%)")
-    .style("left", (d3.event.pageX - 30) + "px")
-    .style("top", (d3.event.pageY - 50) + "px");
+    tooltip.html(d.gemeinde + "<br/>Ja: " + xValue(d)
+    + "%<br/>Beteil.: " + yValue(d) + "%")
+    .style("left", (d3.event.pageX - 40) + "px")
+    .style("top", (d3.event.pageY - 75) + "px");
     $(this).attr("r", 7).attr("stroke", "black");
     this.parentNode.appendChild(this);
   })
