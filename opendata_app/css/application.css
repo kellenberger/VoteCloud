@@ -40,8 +40,12 @@ mark{
 .input-field .prefix ~ input, .input-field .prefix ~ textarea, .input-field .prefix ~ label, .input-field .prefix ~ .validate ~ label, .input-field .prefix ~ .autocomplete-content{
   margin-left: 1rem !important;
 }
-.white-nav{
-  box-shadow: none;
+.prefix {
+  bottom: 0px;
+  left: 17px;
+}
+.topbarsearch{
+  margin-bottom: 0px !important;
 }
 .autocomplete-content{
   background-color: white;
@@ -54,12 +58,6 @@ mark{
 ul.autocomplete-content{
   position: absolute;
 }
-li{
-  max-height: 55px;
-}
 .breadcrumb-wrapper{
   padding-right: 10px;
-}
-.breadcrumb:before{
-  color: #546e7a !important;
 }
