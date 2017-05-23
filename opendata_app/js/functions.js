@@ -303,7 +303,7 @@ function addBreadcrumb(selectedWord){
   $("svg").remove();
   $("table").remove();
   $(".preloader-wrapper").show();
-  $(".breadcrumb-wrapper").append("<a href=\"#!\" class=\"breadcrumb\">"+selectedWord.toUpperCase()+"</a>");
+  $(".breadcrumb-wrapper").append("<a href=\"#!\" class=\"breadcrumb blue-grey-text text-darken-1\">"+selectedWord.toUpperCase()+"</a>");
   displayedWords.push(selectedWord.toLowerCase());
   var currentIds = calculateNewList();
   if(currentIds.size <= 25){

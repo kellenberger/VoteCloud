@@ -40,7 +40,7 @@ mark{
 .input-field .prefix ~ input, .input-field .prefix ~ textarea, .input-field .prefix ~ label, .input-field .prefix ~ .validate ~ label, .input-field .prefix ~ .autocomplete-content{
   margin-left: 1rem !important;
 }
-.search-nav{
+.white-nav{
   box-shadow: none;
 }
 .autocomplete-content{
@@ -59,4 +59,7 @@ li{
 }
 .breadcrumb-wrapper{
   padding-right: 10px;
+}
+.breadcrumb:before{
+  color: #546e7a !important;
 }

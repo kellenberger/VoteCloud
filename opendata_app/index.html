@@ -10,132 +10,26 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/application.css">
   <script type="text/javascript" src="js/libraries/jquery-2.1.4.js"></script>
-  <script type="text/javascript" src="js/libraries/jquery.mark.min.js"></script>
-  <script type="text/javascript" src="js/libraries/d3.js"></script>
-  <script type="text/javascript" src="js/libraries/d3.layout.cloud.js"></script>
   <script type="text/javascript" src="js/libraries/materialize.min.js"></script>
-  <script type="text/javascript" src="js/classes/Vote.js"></script>
-  <script type="text/javascript" src="js/classes/WordWithIds.js"></script>
-  <script type="text/javascript" src="js/scatterplot.js"></script>
-  <script type="text/javascript" src="js/functions.js"></script>
-  <script type="text/javascript" src="js/application.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-  <div class="container">
-    <nav class="search-nav white">
-      <div class="nav-wrapper">
-        <h2 class="brand-logo left blue-grey-text text-darken-1">Zürich Voting Dev</h2>
-        <ul class="hide-on-med-and-down right">
-          <li>
-            <div class="center row">
-              <div class="col s12 " >
-                <div class="row topbarsearch">
-                  <div class="input-field col s6 s12">
-                    <i class="blue-grey-text text-darken-1 material-icons prefix">search</i>
-                    <input type="text" placeholder="Suche" class="autocomplete-input autocomplete blue-grey-text text-darken-1" >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="search-nav" class="search-nav white hide-on-large-only">
-      <div class="nav-wrapper">
-        <ul>
-          <li>
-            <div class="center row">
-              <div class="col s12 " >
-                <div class="row topbarsearch">
-                  <div class="input-field col s6 s12">
-                    <i class="blue-grey-text text-darken-1 material-icons prefix">search</i>
-                    <input type="text" placeholder="Suche" class="autocomplete-input autocomplete blue-grey-text text-darken-1" >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <nav class="blue-grey darken-1">
-      <div class="nav-wrapper">
-        <div class="col s12 breadcrumb-wrapper">
-          <a href="#!" id="overview" class="breadcrumb">Übersicht</a>
-        </div>
-      </div>
-    </nav>
-    <div class="row">
-      <div id="vote-count" class="col s12" hidden>
-        <b></b> passende Abstimungen gefunden
-      </div>
-      <div id="content-wrapper">
-        <div class="preloader-wrapper big active">
-          <div class="spinner-layer spinner-blue-grey-only">
-            <div class="circle-clipper left">
-              <div class="circle"></div>
-            </div>
-            <div class="gap-patch">
-              <div class="circle"></div>
-            </div>
-            <div class="circle-clipper right">
-              <div class="circle"></div>
-            </div>
-          </div>
-        </div>
-        <div id="details-wrapper" class="col s12 wrapper">
+  <ul id="slide-out" class="side-nav">
+    <h5 class="blue-grey-text text-darken-1">Navigation<h5>
+    <li><a href="/"><i class="material-icons">home</i>Home</a></li>
+    <li><a href="/application.html"><i class="material-icons">apps</i>Applikation</a></li>
+  </ul>
 
-        </div>
-        <div id="single-vote-wrapper" class="col s12 wrapper" hidden>
-          <h5 id="description"></h5>
-          <div class="row section">
-            <div class="col m3 s6 label">Vorlagenart:</div>
-            <div id="type" class="col m3 s6"></div>
-            <div class="col m3 s6 label">Abstimmungsart:</div>
-            <div id="vote-description" class="col m3 s6"></div>
-            <div class="col m3 s6 label">Ja-Stimmen Prozent:</div>
-            <div id="yes-percentage" class="col m3 s6"></div>
-            <div class="col m3 s6 label">Stimmbeteiligung:</div>
-            <div id="vote-participation" class="col m3 s6"></div>
-            <div class="col m3 s6 label">Abstimmungsdatum:</div>
-            <div id="vote-date" class="col m3 s6"></div>
-            <div class="col m3 s6 label">Link:</div>
-            <div id="url" class="col m3 s6"><a target="_blank" href="#!"></a></div>
-          </div>
-          <div id="legend-checkbox" class="switch">
-            <label>
-              <input type="checkbox" id="legend-display" checked="checked">
-              <span class="lever"></span>
-              Legende anzeigen
-            </label>
-          </div>
-          <div id="graph" class="col l6 m9 s12"></div>
-        </div>
-      </div>
-      <div class="fixed-action-btn">
-        <a style="font-size: 30px" id="help-button" class="btn-floating waves-effect waves-light btn-large blue pulse" href="#wordcloud-help-modal">
-          ?
-        </a>
-      </div>
+  <nav class="blue-grey darken-1">
+    <div class="nav-wrapper">
+      <ul class="left">
+        <li><a href="#!" data-activates="slide-out" class="side-nav-trigger"><i class="material-icons">menu</i></a></li>
+      </ul>
+      <a href="/" class="brand-logo center">Zürich Voting Dev</a>
     </div>
-  </div>
-  <div id="wordcloud-help-modal" class="modal modal-fixed-footer">
-    <div class="modal-content">
-      <h4>Hilfe/Information</h4>
-      <p>Hier kommt eine Anleitung zur Verwendung der Wordcloud rein</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Schliessen</a>
-    </div>
-  </div>
-  <div id="scatterplot-help-modal" class="modal modal-fixed-footer">
-    <div class="modal-content">
-      <h4>Hilfe/Information</h4>
-      <p>Hier kommt eine Anleitung zur Verwendung des Scatterplot rein</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Schliessen</a>
-    </div>
+  </nav>
+  <div class="container">
+    Dokumentation
+    <p><a href="#!" data-activates="slide-out" class="side-nav-trigger">zur App...</a></p>
   </div>
 </body>

@@ -1,7 +1,4 @@
 $(document).ready(function(){
-  //initializes the help modal
-  $('.modal').modal();
-
   // loads the json with the results of all votes
   $.getJSON("json/results_kanton.json", function(data){
     var votes = [];
