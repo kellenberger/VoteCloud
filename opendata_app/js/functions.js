@@ -249,6 +249,9 @@ function returnToOverview(){
 }
 
 function jumpToBreadcrumb(word){
+  if($(".breadcrumb").last().html()=="Details"){
+    $(".breadcrumb").last().remove();
+  }
   while(word.localeCompare(displayedWords[displayedWords.length-1])!=0){
     displayedWords.pop();
     $(".breadcrumb").last().remove();

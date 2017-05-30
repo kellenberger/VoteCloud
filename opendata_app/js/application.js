@@ -22,6 +22,9 @@ $(document).ready(function(){
   });
 
   $("body").on("click", ".breadcrumb", function(event){
+    if($(this).is(':last-child')){
+      return false;
+    }
     $("svg").remove();
     $("table").remove();
     $("#single-vote-wrapper").hide();
@@ -40,6 +43,7 @@ $(document).ready(function(){
   $("body").on("click", "tr.vote-row", function(event){
     $("#details-wrapper").hide();
     $(".preloader-wrapper").show();
+    $(".breadcrumb-wrapper").append("<a href=\"#!\" class=\"breadcrumb\">Details</a>");
     var voteId = $(this).find("input.vote-id").val();
     showVoteDetails(voteId);
     $("#help-button").attr("href", "#scatterplot-help-modal");

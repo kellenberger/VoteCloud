@@ -2,7 +2,7 @@
 <html lang="de">
 
 <head>
-  <title>Voting Dev</title>
+  <title>VoteCloud</title>
   <meta name="description" content="Beschreibung der Applikation">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
@@ -23,21 +23,22 @@
 </head>
 <body>
   <ul id="slide-out" class="side-nav">
-    <h5 class="blue-grey-text text-darken-1">Navigation<h5>
-      <li><a href="/"><i class="material-icons">home</i>Home</a></li>
-      <li><a href="/application.html"><i class="material-icons">apps</i>Applikation</a></li>
-    </ul>
-    <div class="navbar-fixed">
-      <nav class="blue-grey darken-3">
-        <div class="nav-wrapper">
-          <ul class="left">
-            <li><a href="#!" data-activates="slide-out" class="side-nav-trigger"><i class="material-icons">menu</i></a></li>
-          </ul>
-          <a href="/" class="brand-logo center">VoteCloud</a>
-        </div>
-      </nav>
-    </div>
-    <div class="container">
+    <h5 class="blue-grey-text text-darken-1">Navigation</h5>
+    <li><a href="/"><i class="material-icons">home</i>Home</a></li>
+    <li><a href="/application.html"><i class="material-icons">apps</i>Applikation</a></li>
+  </ul>
+  <div class="navbar-fixed">
+    <nav class="blue-grey darken-3">
+      <div class="nav-wrapper">
+        <ul class="left">
+          <li><a href="#!" data-activates="slide-out" class="side-nav-trigger"><i class="material-icons">menu</i></a></li>
+        </ul>
+        <a href="/" class="brand-logo center">VoteCloud</a>
+      </div>
+    </nav>
+  </div>
+  <div class="container">
+    <div class="row section">
       <nav class="nav-extended blue-grey darken-1">
         <div class="nav-wrapper">
           <div class="col s12 breadcrumb-wrapper">
@@ -101,28 +102,29 @@
           </div>
         </div>
         <div class="fixed-action-btn">
-          <a style="font-size: 30px" id="help-button" class="btn-floating waves-effect waves-light btn-large blue-grey lighten-1" href="#wordcloud-help-modal">
+          <a style="font-size: 30px" id="help-button" class="btn-floating waves-effect waves-light btn-large blue-grey lighten-1" href="#wordcloud-help-modal" title="Hilfe">
             ?
           </a>
         </div>
       </div>
     </div>
-    <div id="wordcloud-help-modal" class="modal modal-fixed-footer">
-      <div class="modal-content">
-        <h4>Hilfe/Information</h4>
-        <p>Hier kommt eine Anleitung zur Verwendung der Wordcloud rein</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Schliessen</a>
-      </div>
+  </div>
+  <div id="wordcloud-help-modal" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Hilfe/Information</h4>
+      <p>Hier kommt eine Anleitung zur Verwendung der Wordcloud rein</p>
     </div>
-    <div id="scatterplot-help-modal" class="modal modal-fixed-footer">
-      <div class="modal-content">
-        <h4>Hilfe/Information</h4>
-        <p>Hier kommt eine Anleitung zur Verwendung des Scatterplot rein</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Schliessen</a>
-      </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Schliessen</a>
     </div>
-  </body>
+  </div>
+  <div id="scatterplot-help-modal" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Hilfe/Information</h4>
+      <p>Hier kommt eine Anleitung zur Verwendung des Scatterplot rein</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Schliessen</a>
+    </div>
+  </div>
+</body>

@@ -2,7 +2,7 @@
 <html lang="de">
 
 <head>
-  <title>Voting Dev</title>
+  <title>VoteCloud</title>
   <meta name="description" content="Beschreibung der Applikation">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
@@ -15,7 +15,7 @@
 </head>
 <body>
   <ul id="slide-out" class="side-nav">
-    <h5 class="blue-grey-text text-darken-1">Navigation<h5>
+    <h5 class="blue-grey-text text-darken-1">Navigation</h5>
     <li><a href="/"><i class="material-icons">home</i>Home</a></li>
     <li><a href="/application.html"><i class="material-icons">apps</i>Applikation</a></li>
   </ul>
@@ -30,8 +30,117 @@
       </div>
     </nav>
   </div>
-  <div class="container">
-    Dokumentation
-    <p><a href="#!" data-activates="slide-out" class="side-nav-trigger">zur App...</a></p>
+  <div class="parallax-container">
+    <div class="parallax"><img src="img/wordcloud_abstimmungen.png"></div>
   </div>
+  <div class="section grey lighten-4 parallax-section">
+    <div class="container">
+      <h3 class="center-align blue-grey-text text-darken-1">VoteCloud</h3>
+      <div class="row section">
+        <div class="col s12">
+          ... ist eine Visualisierung der Abstimmungsresultate des Kantons Zürich zwischen 1831 und 2016. Sie wurde im Rahmen der Opendata Vorlesung 2017 an der Universität
+          Bern erstellt. Das Ziel der Übung war es, eine Webapplikation zu erstellen, die einen bestehenden Opendata-Datensatz auf eine neue, kreative Weise visualisiert.
+          Für die App wurden die Daten aus dem Abstimmungsarchiv des Kantons Zürich verwendet, die unter diesem
+          <a href="https://opendata.swiss/de/dataset/abstimmungsarchiv-des-kantons-zurich" class="blue-grey-text text-darken-3">Link</a>
+          öffentlich zugänglich sind.
+        </div>
+        <div class="col s12">
+           Zu den verwendeten Frameworks gehören d3.js, jQuery und Materialize. Der Datensatz enthält Details zu fast 2000 Abstimmungen über die letzten zwei Jahrhunderte.
+           Da diese Daten thematisch nicht kategorisiert sind, wurde als Visualisierungsform eine Wordcloud gewählt. Die Absicht dahinter war, Abstimmungen mit ähnlichen
+           Beschreibungen zu gruppieren.
+         </div>
+         <div class="col s12">
+           Zur Applikation geht es über das Menü oben links oder
+           <a href="/application.html" class="blue-grey-text text-darken-3">hier</a>.
+        </div>
+      </div>
+      <h4 class="center-align blue-grey-text text-darken-1">Vorgehen</h4>
+      <div class="row section">
+        <div class="col s12 m3">
+          <div class="center promo">
+            <i class="material-icons large blue-grey-text text-darken-1">search</i>
+            <p class="promo-caption blue-grey-text text-darken-1">Visualisierungsform finden</p>
+            <p class="light center promo-content">
+              Nachdem ich verschiedene Visualisierungsformen auf ihre Eignung geprüft habe, entschied ich mich für eine sogenannte Wordcloud. Dabei handelt es sich um
+              die Anordnung einer Auswahl von Wörtern als eine "Wolke" mit der Wortgrösse als Indikator ihrer jeweiligen "Wichtigkeit". Wie bestimmt wird, welche Worte
+              wichtiger sind als andere, kann dabei variieren. Meine Idee war es, gemeinsame Wörter von verschiedenen Abstimmungen darzustellen, um eine gewisse Ordnung
+              in den ansonst bezüglich Themengebiet relativ unstrukturierten Datensatz zu bringen.
+          </p>
+          </div>
+        </div>
+        <div class="col s12 m3">
+          <div class="center promo">
+            <i class="material-icons large blue-grey-text text-darken-1">functions</i>
+            <p class="promo-caption blue-grey-text text-darken-1">Algorithmus zur Wortauswahl</p>
+            <p class="light center promo-content">
+              Nachdem ich eine Darstellungsmöglichkeit gefunden hatte, musste ich irgendwie die relevanten Wörter aus meinen Daten extrahieren und ihnen eine Wichtigkeit
+              zuweisen. Dazu habe ich einen Algorithmus entwickelt, der in den Beschreibungen der einzelnen Vorlagen solche Wörter findet, die bei mehreren Vorlagen
+              vorkommen, und der diesen Wörtern eine Wichtigkeit anhand der Anzahl ihrer Vorkommnisse zuweist. Dabei lagen die Schwierigkeiten darin, dass in der deutschen
+              Sprache dasselbe Wort teilweise unterschiedlich geschrieben wird (z.B. "Gesetz" und "Gesetze") und, dass der Algorithmus bei der Grösse des Datensatzes zu
+              Beginn viel zu langsam war.
+            </p>
+          </div>
+        </div>
+        <div class="col s12 m3">
+          <div class="center promo">
+            <i class="material-icons large blue-grey-text text-darken-1">add_circle_outline</i>
+            <p class="promo-caption blue-grey-text text-darken-1">Zusätzliche Features</p>
+            <p class="light center promo-content">
+              Als nächstes galt es zusätzliche Funktionen zu implementieren. Das heisst zum Beispiel, dass bei einem Klick auf ein Wort der Wordcloud eine Detailansicht der
+              Vorlagen, die dieses Wort enthalten erscheint. Ausserdem wurde mir klar, dass die Visualisierung mit einer Wordcloud für den "spontanen" Benutzer zwar
+              praktisch und schnell ist, wird allerdings gezielt nach einem Begriff gesucht, so kommt man mit der eher unübersichtlichen Wolke nicht weit. Deshalb habe ich
+              die Applikation noch um eine Suchfunktion ergänzt.
+            </p>
+          </div>
+        </div>
+        <div class="col s12 m3">
+          <div class="center promo">
+            <i class="material-icons large blue-grey-text text-darken-1">format_paint</i>
+            <p class="promo-caption blue-grey-text text-darken-1">Design und Feinschliff</p>
+            <p class="light center promo-content">
+              Zuletzt gab es noch einige kleine Dinge zu bereinigen und zu korrigieren. Ausserdem musste die Applikation noch in ein optisch ansprechendes Design gepackt
+              werden und die Usability und Benutzerführung mussten verbessert werden. Zu diesem Zweck habe ich einen Hilfe-Button hinzugefügt, um die einzelnen verfügbaren Funktionen genauer
+              zu erläutern.
+            </p>
+          </div>
+        </div>
+      </div>
+      <h4 class="center-align blue-grey-text text-darken-1">Über Mich</h4>
+      <div class="row section">
+        <div class="col s12 m4 offset-m4">
+          <div class="center promo">
+            <i class="material-icons large blue-grey-text text-darken-1">person</i>
+            <p class="promo-caption blue-grey-text text-darken-1">Sven Kellenberger</p>
+            <p class="light center promo-content">
+              Cand. BSc in Computer Science, Universität Bern</br>
+              <a href="mailto:sven.kellenberger@students.unibe.ch" class="blue-grey-text text-darken-3">Kontakt</a>
+          </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="page-footer blue-grey darken-3">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="https://opendata.swiss/de/dataset/abstimmungsarchiv-des-kantons-zurich">Abstimmungsdaten</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Quellcode (Download)</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Sven Kellenberger
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
 </body>
