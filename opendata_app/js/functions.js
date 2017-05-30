@@ -109,7 +109,7 @@ function displayWordCloud(){
     }
   }
 
-  var fill = d3.scale.category20();
+  var fill = d3.scale.category10();
 
   var width = $("#details-wrapper").width();
   var height;

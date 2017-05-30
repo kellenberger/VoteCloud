@@ -96,19 +96,30 @@ function drawScatterPlot(results){
     $("circle").attr("r", 3.5).removeAttr("stroke");
   });
 
+  var stepSize, textSize, rectSize;
+  if($("body").width()<=600){
+    stepSize = 15;
+    textSize = 13;
+    rectSize = 13;
+  } else {
+    stepSize = 20;
+    textSize = 18;
+    rectSize = 18;
+  }
+
   // draw legend
   var legend = svg.selectAll(".legend")
   .data(color.domain())
   .enter().append("g")
   .attr("class", "legend")
   .attr("id", function(d) { return d.toLowerCase(); })
-  .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+  .attr("transform", function(d, i) { return "translate(0," + i * stepSize + ")"; });
 
   // draw legend colored rectangles
   legend.append("rect")
   .attr("x", width - 18)
-  .attr("width", 18)
-  .attr("height", 18)
+  .attr("width", rectSize)
+  .attr("height", rectSize)
   .style("fill", color);
 
   // draw legend text
@@ -117,5 +128,6 @@ function drawScatterPlot(results){
   .attr("y", 9)
   .attr("dy", ".35em")
   .style("text-anchor", "end")
+  .style("font-size", textSize+"px")
   .text(function(d) { return d;})
 }
