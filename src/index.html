@@ -30,9 +30,11 @@
       </div>
     </nav>
   </div>
-  <div class="parallax-container">
-    <div class="parallax"><img src="img/wordcloud_abstimmungen.png"></div>
-  </div>
+  <a href="/application.html">
+    <div class="parallax-container">
+      <div class="parallax"><img src="img/wordcloud_abstimmungen.png"></div>
+    </div>
+  </a>
   <div class="section grey lighten-4 parallax-section">
     <div class="container">
       <h3 class="center-align blue-grey-text text-darken-1">VoteCloud</h3>
@@ -41,17 +43,17 @@
           ... ist eine Visualisierung der Abstimmungsresultate des Kantons Zürich zwischen 1831 und 2016. Sie wurde im Rahmen der Opendata Vorlesung 2017 an der Universität
           Bern erstellt. Das Ziel der Übung war es, eine Webapplikation zu erstellen, die einen bestehenden Opendata-Datensatz auf eine neue, kreative Weise visualisiert.
           Für die App wurden die Daten aus dem Abstimmungsarchiv des Kantons Zürich verwendet, die unter diesem
-          <a href="https://opendata.swiss/de/dataset/abstimmungsarchiv-des-kantons-zurich" class="blue-grey-text text-darken-3">Link</a>
+          <a href="https://opendata.swiss/de/dataset/abstimmungsarchiv-des-kantons-zurich">Link</a>
           öffentlich zugänglich sind.
         </div>
         <div class="col s12">
-           Zu den verwendeten Frameworks gehören d3.js, jQuery und Materialize. Der Datensatz enthält Details zu fast 2000 Abstimmungen über die letzten zwei Jahrhunderte.
-           Da diese Daten thematisch nicht kategorisiert sind, wurde als Visualisierungsform eine Wordcloud gewählt. Die Absicht dahinter war, Abstimmungen mit ähnlichen
-           Beschreibungen zu gruppieren.
-         </div>
-         <div class="col s12">
-           Zur Applikation geht es über das Menü oben links oder
-           <a href="/application.html" class="blue-grey-text text-darken-3">hier</a>.
+          Zu den verwendeten Frameworks gehören d3.js, jQuery und Materialize. Der Datensatz enthält Details zu fast 2000 Abstimmungen über die letzten zwei Jahrhunderte.
+          Da diese Daten thematisch nicht kategorisiert sind, wurde als Visualisierungsform eine Wordcloud gewählt. Die Absicht dahinter war, Abstimmungen mit ähnlichen
+          Beschreibungen zu gruppieren.
+        </div>
+        <div class="col s12">
+          Zur Applikation geht es über das Menü oben links oder
+          <a href="/application.html">hier</a>.
         </div>
       </div>
       <h4 class="center-align blue-grey-text text-darken-1">Vorgehen</h4>
@@ -65,7 +67,7 @@
               die Anordnung einer Auswahl von Wörtern als eine "Wolke" mit der Wortgrösse als Indikator ihrer jeweiligen "Wichtigkeit". Wie bestimmt wird, welche Worte
               wichtiger sind als andere, kann dabei variieren. Meine Idee war es, gemeinsame Wörter von verschiedenen Abstimmungen darzustellen, um eine gewisse Ordnung
               in den ansonst bezüglich Themengebiet relativ unstrukturierten Datensatz zu bringen.
-          </p>
+            </p>
           </div>
         </div>
         <div class="col s12 m3">
@@ -112,35 +114,36 @@
             <i class="material-icons large blue-grey-text text-darken-1">person</i>
             <p class="promo-caption blue-grey-text text-darken-1">Sven Kellenberger</p>
             <p class="light center promo-content">
-              Cand. BSc in Computer Science, Universität Bern</br>
-              <a href="mailto:sven.kellenberger@students.unibe.ch" class="blue-grey-text text-darken-3">Kontakt</a>
-          </p>
+              Cand. BSc in Computer Science</br>
+              Universität Bern</br>
+              4. Semester</br>
+              <a href="mailto:sven.kellenberger@students.unibe.ch" class="blue-grey-text text-darken-1"><i class="material-icons tiny">email</i> Kontakt</a>
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
   <footer class="page-footer blue-grey darken-3">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="https://opendata.swiss/de/dataset/abstimmungsarchiv-des-kantons-zurich">Abstimmungsdaten</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Quellcode (Download)</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2017 Sven Kellenberger
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-          </div>
-        </footer>
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="https://opendata.swiss/de/dataset/abstimmungsarchiv-des-kantons-zurich">Verwendete Daten (CSV)</a></li>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="https://github.com/skell94/VoteCloud">Sourcecode (Github)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2017 Sven Kellenberger
+      </div>
+    </div>
+  </footer>
 </body>
