@@ -69,6 +69,10 @@ function drawScatterPlot(results){
   .style("text-anchor", "end")
   .text("Stimmbeteiligung (%)");
 
+  //slims down the axis
+  svg.selectAll('.axis path')
+     .style({'stroke': 'Black', 'fill': 'none', 'stroke-width': '2px'});
+
   // draw dots
   svg.selectAll(".dot")
   .data(results)

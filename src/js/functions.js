@@ -213,7 +213,7 @@ Set.prototype.filter = function(f) {
 };
 
 function showDetailTable(ids){
-  $("input.autocomplete-input").prop("disabled", true);
+  $(".topbarsearch").hide();
   $("ul.autocomplete-content").hide();
   displayedIds.push(ids);
   $("#vote-count b").html(ids.size);
@@ -280,8 +280,8 @@ function showVoteDetails(voteId){
   $("#description").html(vote.description);
   $("#type").html(vote.type);
   $("#vote-description").html(vote.voteDescription);
-  $("#yes-percentage").html(vote.yesPercentage);
-  $("#vote-participation").html(vote.voteParticipation);
+  $("#yes-percentage").html(vote.yesPercentage+"%");
+  $("#vote-participation").html(vote.voteParticipation+"%");
   $("#vote-date").html(vote.dateToString());
   $("#url a").html(vote.urlDescription).attr("href", vote.url);
   $("input#legend-display").prop("checked", true);
@@ -331,7 +331,7 @@ function searchWord(word){
 }
 
 function initAutocomplete(){
-  $("input.autocomplete-input").prop("disabled", false);
+  $(".topbarsearch").show();
   $("ul.autocomplete-content").show();
   var words = possibleWordsWithIdsStack[possibleWordsWithIdsStack.length-1].map(function(d){ return d.word });
   var autocompleteData = {};

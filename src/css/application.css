@@ -93,3 +93,6 @@ mark{
 .label{
   font-weight: bold;
 }
+.details-row{
+  margin-left: 20px !important;
+}
