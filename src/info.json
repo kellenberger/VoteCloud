@@ -1,6 +1,8 @@
 {
-"title": "Titel der App",
-"description": "Beschreibung der App",
-"date": "YYYY-MM-DD",
-"category": "voting"
+"title": "VoteCloud",
+"description": "Votecloud visualisiert die Daten von fast 2000 Abstimmungen im Kanton Zürich über die letzten zweihundert Jahre. Dabei wird eine Wordcloud verwendet. Häufig vorkommende Wörter werden in dieser dargestellt, um eine thematische Ordnung des Datensatzes zu erreichen.",
+"authors": [{name: "Sven Kellenberger", email: "sven.kellenberger@students.unibe.ch"}],
+"date": "2017-06-01",
+"category": "society",
+"software_license": "GNU General Public License v3"
 }
