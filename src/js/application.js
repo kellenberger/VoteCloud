@@ -1,4 +1,9 @@
 $(document).ready(function(){
+  // Checks if Internet Explorer is used. In this case the app won't work
+  if(/*@cc_on!@*/false || !!document.documentMode){
+      alert("Diese Applikation verwendet einige Funktionen, die von Internet Explorer nicht unterstützt werden. Bitte wechseln Sie zur fehlerfreien Benutzung der App auf einen anderen Browser.");
+  }
+
   // loads the json with the results of all votes
   $.getJSON("json/results_kanton.json", function(data){
     var votes = [];
