@@ -41,16 +41,15 @@
       <div class="row section">
         <div class="col s12">
           ... ist eine Visualisierung von den Abstimmungsresultaten des Kantons Zürich aus den Jahren 1831 bis 2016. Sie wurde im Rahmen der Opendata Vorlesung 2017 an
-          der Universität Bern erstellt. Das Ziel der Übung war es, eine Webapplikation zu erstellen, die einen bestehenden Opendata-Datensatz auf eine neue, kreative
+          der Universität Bern erstellt. Die Aufgabe war es, eine Webapplikation zu erstellen, die einen bestehenden Opendata-Datensatz auf eine neue, kreative
           Weise visualisiert. Für die App wurden Daten aus dem Abstimmungsarchiv des Kantons Zürich verwendet, ein Link zum Download befindet sich am Ende der Seite.
         </div>
       </div>
       <div class="row section">
         <div class="col s12">
-          Der Datensatz enthält Details zu beinahe 2000 Abstimmungen aus den letzten zwei Jahrhunderten.
-          Da diese Daten thematisch nicht kategorisiert sind, wurde als Visualisierungsform eine Wordcloud gewählt. Es war die Absicht, die Abstimmungen anhand
-          der Wörter, die in ihren Beschreibungen vorkommen, zu gruppieren. So sollte eine einfache thematische Zuordnung ermöglicht werden.
-          Beschreibungen zu gruppieren.
+          Der Datensatz enthält Details zu beinahe 2000 Abstimmungen.
+          Da diese Daten thematisch nicht kategorisiert sind, wurde als Visualisierungsform eine Wordcloud gewählt. Die Abstimmungen werden dabei anhand
+          der Wörter, die in ihren Beschreibungen vorkommen, gruppiert. So wird eine einfache thematische Zuordnung ermöglicht.
         </div>
       </div>
       <div class="row section">
@@ -69,10 +68,10 @@
             <i class="material-icons large blue-grey-text text-darken-1">search</i>
             <p class="promo-caption blue-grey-text text-darken-1">Visualisierungsform finden</p>
             <p class="light center promo-content">
-              Nachdem verschiedene Visualisierungsformen auf ihre Eignung geprüft wurden, wurde die sogenannte Wordcloud ausgewählt. Dabei handelt es sich um
-              die Anordnung von Wörtern als eine "Wolke" mit der Wortgrösse als Indikator ihrer jeweiligen "Wichtigkeit". Auf welche Weise bestimmt wird, welche Worte
-              wichtiger sind als andere, ist dabei nicht vorgegeben. In diesem konkreten Fall war die Idee, Wörter, die regelmässig in der Abstimmungsbezeichnung vorkommen,
-              zu finden, und sie anhand ihrer Häufigkeit zu sortieren. So sollte eine gewisse Ordnung in den ansonst thematisch unstrukturierten Datensatz gebracht werden.
+              Nachdem verschiedene Visualisierungsformen auf ihre Eignung geprüft wurden, fiel die Entscheidung auf eine sogenannte Wordcloud. Dabei handelt es sich um
+              die Anordnung von Wörtern als eine "Wolke" mit der Wortgrösse als Indikator ihrer jeweiligen "Wichtigkeit". Die Weise, auf welche bestimmt wird, welche Worte
+              wichtiger sind als andere, kann dabei selbst gewählt werden. In diesem konkreten Fall werden Wörter gesucht, die regelmässig in Abstimmungsbezeichnungen vorkommen.
+              Diese werden dann anhand ihrer Häufigkeit sortiert. So wird eine gewisse Ordnung in den ansonst thematisch unstrukturierten Datensatz gebracht.
             </p>
           </div>
         </div>
@@ -81,10 +80,10 @@
             <i class="material-icons large blue-grey-text text-darken-1">functions</i>
             <p class="promo-caption blue-grey-text text-darken-1">Algorithmus zur Wortauswahl</p>
             <p class="light center promo-content">
-              Danach musste ein Weg gefunden werden, um die relevanten Wörter aus den Daten zu extrahieren und ihnen eine Wichtigkeit zuzuweisen.
-              Dazu wurde ein Algorithmus entwickelt, der in den Beschreibungen der einzelnen Vorlagen solche Wörter findet, die bei mehreren Vorlagen
-              vorkommen, und der diesen Wörtern eine Wichtigkeit anhand der Anzahl ihrer Vorkommnisse zuweist. Dabei lagen die Schwierigkeiten darin, unwichtige Wörter
-              (z.B. "und") herauszufiltern und gleiche Wörter in unterschieldichen Formen (z.B. "kantonal" und "kantonale") als solche zu erkennen. Zusätzlich kam
+              Um die relevanten Wörter aus den Daten zu extrahieren und ihnen eine Wichtigkeit zuzuweisen, wurde ein Algorithmus entwickelt,
+              der in den Beschreibungen der einzelnen Vorlagen solche Wörter findet, die bei mehreren Vorlagen
+              vorkommen, und der diesen Wörtern eine Wichtigkeit anhand der Anzahl ihrer Vorkommnisse zuweist. Dabei lag die Schwierigkeit darin, unwichtige Wörter
+              (z.B. "und") herauszufiltern und gleiche Wörter in unterschiedlichen Formen (z.B. "kantonal" und "kantonale") als solche zu erkennen. Ausserdem kam
               erschwerend hinzu, dass der Algorithmus zu Beginn für den Gebrauch viel zu langsam war.
             </p>
           </div>
@@ -94,8 +93,8 @@
             <i class="material-icons large blue-grey-text text-darken-1">add_circle_outline</i>
             <p class="promo-caption blue-grey-text text-darken-1">Zusätzliche Features</p>
             <p class="light center promo-content">
-              Als nächstes mussten zusätzliche Funktionen implementiert werden. Zum Beispiel, dass bei einem Klick auf ein Wort der Wordcloud eine Detailansicht der
-              Vorlagen, die dieses Wort enthalten, erscheint. Ausserdem wurde schnell klar, dass die Visualisierung mit einer Wordcloud für den "spontanen" Benutzer zwar
+              Danach mussten zusätzliche Funktionen implementiert werden. Zum Beispiel, ein eine Klickfunktion für die Wörter, die eine Detailansicht der
+              Vorlagen, die dieses Wort enthalten, öffnet. Ausserdem wurde schnell klar, dass die Visualisierung mit einer Wordcloud für den "spontanen" Benutzer zwar
               praktisch und schnell ist, wird allerdings gezielt nach einem Begriff gesucht, so ist die leicht unübersichtliche Wolke eher ungeeignet. Deshalb wurde
               die Applikation noch um eine Suchfunktion ergänzt.
             </p>
@@ -106,8 +105,8 @@
             <i class="material-icons large blue-grey-text text-darken-1">format_paint</i>
             <p class="promo-caption blue-grey-text text-darken-1">Design und Feinschliff</p>
             <p class="light center promo-content">
-              Zuletzt gab es noch einige kleine Dinge zu bereinigen, ändern oder korrigieren. Ausserdem musste die Applikation noch in ein optisch ansprechendes Design gepackt
-              werden und die Usability und Benutzerführung mussten verbessert werden. Zu diesem Zweck wurde zum Beispiel ein Hilfe-Knopf hinzugefügt, um die einzelnen
+              Zuletzt fielen noch einige Änderungen, Korrekturen und Verbesserungen an. Ein Teil davon war, die Applikation noch in ein optisch ansprechendes Design zu packen
+              und die Usability und Benutzerführung zu verbessern. Zu diesem Zweck wurde zum Beispiel ein Hilfe-Knopf hinzugefügt, um die einzelnen
               Funktionen genauer zu erklären.
             </p>
           </div>
